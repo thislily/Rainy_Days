@@ -13,15 +13,15 @@
   <body>
     <header>
       <img src="/images/logo-inverted.png" alt="Rainy Days logo" />
+
       <nav>
-        <ul>
-          <li>See Collection</li>
-          <li>Shop Sale</li>
-          <li>Our Story</li>
-          <li>Get Involved</li>
-          <li>Contact Us</li>
-        </ul>
+        <a href="/html/collection.html">See Collection</a>
+        <a href="/html/sale.html">Shop Sale</a>
+        <a href="/html/our-story.html">Our Story</a>
+        <a href="/html/get-involved.html">Get Involved</a>
+        <a href="/html/contact-us.html">Contact Us</a>
       </nav>
+
       <div class="icons">
         <i>search</i>
         <i>profile</i>
@@ -30,8 +30,12 @@
     </header>
 
     <main>
-      <h1>More Than Just A Jacket</h1>
+      <div class="mobile-splash">
+        <h1>More Than Just A Jacket</h1>
+      </div>
+
       <img
+        class="desktop-image"
         src="/images/our-story/our-story-1.png"
         alt="A man wearing a hiking jacket, on a misty beach, with drift wood in the background."
       />
@@ -44,6 +48,13 @@
           prioritize sustainability and eco-friendliness in all aspects of its
           operations. They called their company Rainy Days.
         </p>
+
+        <img
+          class="mobile-image"
+          src="/images/our-story/our-story-mobile-2.png"
+          alt="A man wearing a hiking jacket, sitting on a log in forest."
+        />
+
         <p>
           Rainy Days' founders believed that clothing could be both functional
           and environmentally conscious, and they set out to prove it. They
@@ -58,6 +69,9 @@
           Days' message began to resonate.
         </p>
       </section>
+
+      <img class="mobile-image" src="/images/our-story/our-story-mobile-3.png" alt="A woman wearing a hiking jacket, standing in a forest">
+
       <section>
         <h2>Looking Forward</h2>
         <p>
@@ -74,37 +88,42 @@
         </p>
       </section>
       <img
+        class="desktop-image"
         src="/images/our-story/our-story-2.png"
         alt="A woman wearing a hiking jacket, standing in a forest"
       />
     </main>
 
     <footer>
-      <ul>
-        <li>Rainy Days</li>
-        <li>About Us</li>
-        <li>Find a Store</li>
-        <li>Fabric Care and Maintenance</li>
-        <li>DIY Repairs</li>
-        <li>Activism</li>
-        <li>Gift Cards</li>
-      </ul>
-      <ul>
-        <li>Get Help</li>
-        <li>Contact Us</li>
-        <li>Sizing Guide</li>
-        <li>Returns or Exchanges</li>
-        <li>Order Tracking</li>
-        <li>Shipping Information</li>
-        <li>Give Feedback</li>
-      </ul>
+      <div>
+        <ul>
+          <li>Rainy Days</li>
+          <li>About Us</li>
+          <li>Find a Store</li>
+          <li>Fabric Care and Maintenance</li>
+          <li>DIY Repairs</li>
+          <li>Activism</li>
+          <li>Gift Cards</li>
+        </ul>
+        <ul>
+          <li>Get Help</li>
+          <li>Contact Us</li>
+          <li>Sizing Guide</li>
+          <li>Returns or Exchanges</li>
+          <li>Order Tracking</li>
+          <li>Shipping Information</li>
+          <li>Give Feedback</li>
+        </ul>
+      </div>
+
       <div class="Social-Media">
         <i>Twitter</i>
         <i>TikTok</i>
         <i>Instagram</i>
         <i>Facebook</i>
       </div>
-      <div>
+
+      <div class="subscribe-footer">
         <h3>Subscribe</h3>
         <p>Sign up for pre-sale info and special insider deals</p>
         <input type="email" name="subscribe" id="subscribe-mini" />
