@@ -8,278 +8,419 @@
       name="Checkout | Rainy Days"
       content="Eco-friendly and affordable outerwear, for those of us who can't sit inside for even one more minute!"
     />
+
     <script
       src="https://kit.fontawesome.com/dc8689d417.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
     <title>Checkout | Rainy Days</title>
   </head>
 
   <body>
     <header>
       <a href="../index.html"
-        ><img src="../images/logo-inverted.png" alt="Rainy Days logo"
+        ><img
+          class="home-link"
+          src="../images/logo-inverted.svg"
+          alt="Rainy Days logo"
       /></a>
 
-      <nav>
-        <a href="../html/collection.html">See Collection</a>
-        <a href="../html/sale.html">Shop Sale</a>
-        <a href="../html/our-story.html">Our Story</a>
-        <a href="../html/get-involved.html">Get Involved</a>
-        <a href="../html/contact-us.html">Contact Us</a>
-      </nav>
+      <div class="nav-container">
+        <nav>
+          <a class="hover-effect" href="../html/collection.html">
+            See Collection
+          </a>
+          <a class="hover-effect" href="../html/sale.html"> Shop Sale </a>
+          <a class="hover-effect" href="../html/our-story.html"> Our Story </a>
+          <a class="hover-effect" href="../html/get-involved.html"
+            >Get Involved</a
+          >
+          <a class="hover-effect" href="../html/contact-us.html">Contact Us</a>
+        </nav>
 
-      <div class="icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="icons">
+          <img src="../images/icons/user.svg" alt="" />
+          <img src="../images/icons/cart-full.svg" alt="" />
+        </div>
       </div>
     </header>
 
+    <!--Content begins-->
+
     <main>
-      <div class="continue-shopping">
-        <i class="fa-solid fa-arrow-left"></i>
-        <h2>Continue Shopping</h2>
+      <div class="top-container">
+        <div class="continue-shopping">
+          <a href="../html/collection.html">
+            <h2 class="back">
+              <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+            </h2>
+          </a>
+          <span class="underline"></span>
+        </div>
+
+        <div class="locked">
+          <img
+            class="lock"
+            src="../images/checkout/secure.svg"
+            alt="icon of a padlock"
+          />
+          <p id="totes-secure">This checkout is totes secure, trust me bro.</p>
+        </div>
       </div>
+
       <div class="centered-title">
-        <img src="../images/RainyDays_logo.svg" alt="Rainy days logo" />
+        <img
+          class="centered-logo"
+          src="../images/RainyDays_logo.svg"
+          alt="Rainy days logo"
+        />
         <h1>Secure Checkout</h1>
       </div>
-      <i class="fa-solid fa-lock-keyhole"></i>
+
+      <!--Box 1-->
 
       <div class="checkout-container">
         <h2>1. Review Your Order (<span id="how-many-items">2 items</span>)</h2>
-
+        <span class="thin-line"></span>
         <div class="product-checkout" id="fleece-zip-checkout">
           <img
+            class="product-checkout-image"
             src="../images/items/fleece-zip.png"
             alt="A fleece zip up jacket"
           />
           <div class="product-checkout-info">
             <h3>Fleece Zip</h3>
-            <p>Size: <span id="fleece-zip-size">Medium</span></p>
-            <p>Colour: <span id="fleece-zip-colour">Brown</span></p>
-            <label for="fleece-zip-quantity">Qty: </label>
-            <input
-              type="number"
-              id="fleece-zip-quantity"
-              name="fleece-zip-quantity"
-              min="1"
-              max="10"
-              value="1"
-            />
+            <div>
+              <p>Size: <span id="fleece-zip-size">Medium</span></p>
+              <p>Colour: <span id="fleece-zip-colour">Brown</span></p>
+            </div>
+            <div class="quantity-box">
+              <label for="fleece-zip-quantity">Qty: </label>
+              <input
+                type="number"
+                id="fleece-zip-quantity"
+                name="fleece-zip-quantity"
+                min="1"
+                max="10"
+                value="1"
+              />
+            </div>
           </div>
           <div class="product-checkout-cost">
-            <i class="fa-solid fa-xmark"></i>
+            <img
+              class="x-mark"
+              src="../images/checkout/close.svg"
+              alt="close icon, click to remove item from cart"
+            />
             <h3><span id="fleece-zip-price">799,99 kr</span></h3>
           </div>
         </div>
 
         <div class="product-checkout" id="gift-card-checkout">
           <img
-            src="../images/items/gift-card-image.png"
+            class="product-checkout-image"
+            src="../images/items/gift-card.svg"
             alt="A gift card with the rainy days logo"
           />
           <div class="product-checkout-info">
             <h3>Gift Card</h3>
             <p>Amount: <span id="gift-card-amount">500 kr</span></p>
-            <label for="gift-card-quantity">Qty: </label>
-            <input
-              type="number"
-              id="gift-card-quantity"
-              name="gift-card-quantity"
-              min="1"
-              max="10"
-              value="1"
-            />
+            <div class="quantity-box">
+              <label for="gift-card-quantity">Qty: </label>
+              <input
+                type="number"
+                id="gift-card-quantity"
+                name="gift-card-quantity"
+                min="1"
+                max="10"
+                value="1"
+              />
+            </div>
           </div>
           <div class="product-checkout-cost">
-            <i class="fa-solid fa-xmark"></i>
+            <img
+              class="x-mark"
+              src="../images/checkout/close.svg"
+              alt="close icon, click to remove item from cart"
+            />
             <h3><span id="gift-card-price">500,00 kr</span></h3>
           </div>
         </div>
+        <span class="thin-line"></span>
 
-        <h2>Subtotal <span id="items-subtotal">1299,00 kr</span></h2>
+        <h2 class="centered-text">
+          Subtotal <span id="items-subtotal">1299,00 kr</span>
+        </h2>
 
-        <button class="next">Next</button>
+        <button id="delivery-anchor" class="next">
+          <a href="#delivery-anchor">Next</a>
+        </button>
       </div>
+
+      <!--BOX 2-->
 
       <div class="checkout-container">
         <h2>2. Select Delivery</h2>
-        <label for="country"
-          ><img id="flag"
-            src="../images/checkout/norway.png"
-            alt="flag of selected country"
-        /></label>
-        <select name="country" id="country">
-          <option value="norway">Norway</option>
-          <option value="australia" >Australia</option>
-          <option value="canada" >Canada</option>
-          <option value="south-africa" >South Africa</option>
-          <option value="sweden" >Sweden</option>
-          <option value="united-kingdom" >United Kingdom</option>
-        </select>
+        <span class="thin-line"></span>
+        <div class="small-width">
+          <div class="pick-country">
+            <label for="country"
+              ><img
+                id="flag"
+                src="../images/checkout/norway.png"
+                alt="flag of selected country"
+            /></label>
+            <select name="country" id="country">
+              <option value="norway">Norway</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="south-africa">South Africa</option>
+              <option value="sweden">Sweden</option>
+              <option value="united-kingdom">United Kingdom</option>
+            </select>
+          </div>
 
-        <div class="radio-box">
-          <input
-            type="radio"
-            id="regular-post"
-            name="delivery-option"
-            value="regular-post"
-          />
-          <label for="regular-post"
-            ><p>89 kr</p>
-            <div>
-              <p>Regular Post</p>
-              <p>(10-15 business days)</p>
-            </div>
-            <i class="fa-solid fa-circle-check"></i
-          ></label>
+          <div class="radio-box">
+            <input
+              type="radio"
+              id="regular-post"
+              name="delivery-option"
+              value="regular-post"
+            />
+            <label for="regular-post"
+              ><p>89 kr</p>
+              <div>
+                <p>Regular Post</p>
+                <p>(10-15 business days)</p>
+              </div>
+              <img
+                src="../images/checkout/checkmark-circle.svg"
+                alt="checkmark icon"
+              />
+            </label>
+          </div>
+
+          <div class="radio-box selected">
+            <input
+              type="radio"
+              id="delivered-with-groceries"
+              name="delivery-option"
+              value="delivered-with-groceries"
+            />
+            <label for="delivered-with-groceries"
+              ><p>19 kr</p>
+              <div>
+                <p>Delivered with Groceries</p>
+                <p>(2-3 days, even weekends)</p>
+              </div>
+              <img
+                src="../images/checkout/checkmark-circle.svg"
+                alt="checkmark icon"
+              />
+            </label>
+          </div>
+
+          <div class="radio-box">
+            <input
+              type="radio"
+              id="new-startup-drivers"
+              name="delivery-option"
+              value="new-startup-drivers"
+            />
+            <label for="new-startup-drivers"
+              ><p>FREE</p>
+              <div>
+                <p>New Startup Drivers</p>
+                <p>(3 hours from now)</p>
+              </div>
+              <img
+                src="../images/checkout/checkmark-circle.svg"
+                alt="checkmark icon"
+            /></label>
+          </div>
         </div>
 
-        <div class="radio-box">
-          <input
-            type="radio"
-            id="delivered-with-groceries"
-            name="delivery-option"
-            value="delivered-with-groceries"
-          />
-          <label for="delivered-with-groceries"
-            ><p>19 kr</p>
-            <div>
-              <p>Delivered with Groceries</p>
-              <p>(2-3 days, even weekends)</p>
-            </div>
-            <i class="fa-solid fa-circle-check"></i
-          ></label>
-        </div>
-
-        <div class="radio-box">
-          <input
-            type="radio"
-            id="new-startup-drivers"
-            name="delivery-option"
-            value="new-startup-drivers"
-          />
-          <label for="new-startup-drivers"
-            ><p>FREE</p>
-            <div>
-              <p>New Startup Drivers</p>
-              <p>(3 hours from now)</p>
-            </div>
-            <i class="fa-solid fa-circle-check"></i
-          ></label>
-        </div>
-
-        <button class="next">Next</button>
+        <button id="address-anchor" class="next">
+          <a href="#address-anchor">Next</a>
+        </button>
       </div>
+
+      <!--BOX 3-->
 
       <div class="checkout-container">
         <h2>3. Delivery Address</h2>
-        <p class="centered-text">*All fields required</p>
-        <label for="email">Email Address*</label>
-        <input type="email" name="email" id="email" />
-        <label for="first-name">First Name*</label>
-        <input type="text" id="first-name" name="first-name" />
-        <label for="last-name">Last Name*</label>
-        <input type="text" id="last-name" name="last-name" />
-        <label for="telephone">Telephone</label>
-        <input
-          type="tel"
-          id="telephone"
-          name="telephone"
-          pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-(0-9){2}"
-        />
-        <label for="address">Street address*</label>
-        <input type="text" name="address" id="address" />
-        <div class="city-and-postal">
-          <label for="city">City*</label>
-          <input type="text" name="city" id="city" />
-          <label for="postal">Postal code*</label>
-          <input type="text" name="postal" id="postal" />
+        <span class="thin-line"></span>
+        <div class="form-box">
+          <p class="centered-text">*All fields required</p>
+          <label for="email">Email Address*</label>
+          <input type="email" name="email" id="email" />
+          <label for="first-name">First Name*</label>
+          <input type="text" id="first-name" name="first-name" />
+          <label for="last-name">Last Name*</label>
+          <input type="text" id="last-name" name="last-name" />
+          <label for="telephone">Telephone</label>
+          <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-(0-9){2}"
+          />
+          <label for="address">Street address*</label>
+          <input type="text" name="address" id="address" />
+          <div class="city-and-postal">
+            <div>
+              <label for="city">City*</label>
+              <input type="text" name="city" id="city" />
+            </div>
+            <div>
+              <label for="postal">Postal code*</label>
+              <input type="text" name="postal" id="postal" />
+            </div>
+          </div>
+          <div class="centered-checkbox">
+            <input
+              type="checkbox"
+              name="same-as-billing"
+              id="same-as-billing"
+            />
+            <label for="same-as-billing">
+              <img
+                class="checkmark-circle"
+                src="../images/checkout/larger-checkmark-circle-filled.svg"
+                alt="checkmark icon"
+              />
+              <p>Same as billing address</p>
+            </label>
+          </div>
         </div>
-        <input type="checkbox" name="same-as-billing" id="same-as-billing" />
-        <label for="same-as-billing">Same as billing address</label>
 
-        <button class="next">Next</button>
+        <button id="payment-anchor" class="next">
+          <a href="#payment-anchor">Next</a>
+        </button>
       </div>
 
-      <div class="checkout-container">
+      <!--BOX 4-->
+
+      <div class="checkout-container last-container">
         <h2>4. Select Payment Method</h2>
-        <div class="radio-box">
-          <input
-            type="radio"
-            id="pay-with-card"
-            name="payment-option"
-            value="pay-with-card"
-          />
-          <label for="pay-with-card">
-            <div class="credit-card-icons">
-              <i class="fa-brands fa-cc-visa"></i
-              ><i class="fa-brands fa-cc-mastercard"></i>
-            </div>
-            <p>Pay with card</p>
-            <i class="fa-solid fa-circle-check"></i
-          ></label>
-        </div>
+        <span class="thin-line"></span>
 
-        <div class="radio-box">
-          <input
-            type="radio"
-            id="pay-with-paypal"
-            name="payment-option"
-            value="pay-with-paypal"
-          />
-          <label for="pay-with-paypal"
-            ><i class="fa-brands fa-cc-paypal"></i>
-            <p>Pay with Paypal</p>
-            <i class="fa-solid fa-circle-check"></i
-          ></label>
-        </div>
-
-        <div class="radio-box">
-          <input
-            type="radio"
-            id="pay-with-applepay"
-            name="payment-option"
-            value="pay-with-applepay"
-          />
-          <label for="pay-with-applepay"
-            ><i class="fa-brands fa-cc-apple-pay"></i>
-            <p>Pay with ApplePay</p>
-            <i class="fa-solid fa-circle-check"></i
-          ></label>
-        </div>
-
-        <div>
-          <h3>Subtotal</h3>
-          <p><span id="subtotal">1299,00</span> kr</p>
-        </div>
-        <div>
-          <div>
-            <h3>Shipping</h3>
-            <p id="delivery-choice">Delivered with Groceries</p>
-            <p id="delivery-choice-info">(2-3 days, even weekends)</p>
+        <div class="small-width">
+          <div class="radio-box selected">
+            <input
+              type="radio"
+              id="pay-with-card"
+              name="payment-option"
+              value="pay-with-card"
+            />
+            <label for="pay-with-card">
+              <img
+                src="../images/icons/credit-cards.svg"
+                alt="credit card icons"
+              />
+              <h3>Pay with card</h3>
+              <img
+                src="../images/checkout/checkmark-circle.svg"
+                alt="checkmark icon"
+              />
+            </label>
           </div>
-          <p><span>19,00</span> kr</p>
-        </div>
-        <div class="order-total">
-          <h2>Order Total</h2>
-          <h2><span id="total-price">1318,00</span> kr</h2>
+
+          <div class="radio-box">
+            <input
+              type="radio"
+              id="pay-with-paypal"
+              name="payment-option"
+              value="pay-with-paypal"
+            />
+            <label for="pay-with-paypal"
+              ><img src="../images/icons/paypal.svg" alt="paypal logo icon" />
+              <h3>Pay with Paypal</h3>
+              <img
+                src="../images/checkout/checkmark-circle.svg"
+                alt="checkmark icon"
+              />
+            </label>
+          </div>
+
+          <div class="radio-box">
+            <input
+              type="radio"
+              id="pay-with-applepay"
+              name="payment-option"
+              value="pay-with-applepay"
+            />
+            <label for="pay-with-applepay"
+              ><img
+                src="../images/icons/apple-pay.svg"
+                alt="applepay logo icon"
+              />
+              <h3>Pay with ApplePay</h3>
+              <img
+                src="../images/checkout/checkmark-circle.svg"
+                alt="checkmark icon"
+              />
+            </label>
+          </div>
         </div>
 
-        <input type="checkbox" name="remeber-me" id="remember-me" />
-        <label for="remember-me"
-          ><i class="fa-solid fa-circle-check"></i>
-          <p>Remember me for next time</p></label
-        >
-        <input type="checkbox" name="sign-up" id="sign-up" />
-        <label for="sign-up"
-          ><i class="fa-solid fa-circle-check"></i>
-          <p>Sign up for pre-sale info and insider deals</p></label
-        >
+        <div class="subtotal-box">
+          <div class="subtotal-box-bit">
+            <h3>Subtotal</h3>
+            <p><span id="subtotal">1299,00</span> kr</p>
+          </div>
+          <div class="subtotal-box-bit">
+            <div class="subtotal-box-shipping">
+              <h3>Shipping</h3>
+              <p id="delivery-choice">Delivered with Groceries</p>
+              <p id="delivery-choice-info">(2-3 days, even weekends)</p>
+            </div>
+            <p><span>19,00</span> kr</p>
+          </div>
+          <div class="order-total subtotal-box-bit">
+            <h2>Order Total</h2>
+            <h2><span id="total-price">1318,00</span> kr</h2>
+          </div>
+        </div>
 
-        <button class="pay-now">Pay Now</button>
+        <span class="thick-line"></span>
+
+        <div class="left-align-checkbox">
+          <input type="checkbox" name="remeber-me" id="remember-me" />
+          <label for="remember-me">
+            <img
+              class="checkmark-circle"
+              src="../images/checkout/larger-checkmark-circle-filled.svg"
+              alt="checkmark icon"
+            />
+          </label>
+          <p>Remember me for next time</p>
+        </div>
+
+        <div class="left-align-checkbox">
+          <input type="checkbox" name="sign-up" id="sign-up" />
+          <label for="sign-up"
+            ><img
+              class="checkmark-circle"
+              src="../images/checkout/larger-checkmark-circle-filled.svg"
+              alt="checkmark icon"
+            />
+          </label>
+          <p>Sign up for pre-sale info and insider deals</p>
+        </div>
+
+        <button class="pay-now">
+          <a href="../html/successful-checkout.html">Pay Now</a>
+        </button>
         <p class="small-letters">
           *By signing up or placing an order you are consenting to our privacy
           policy
@@ -287,18 +428,19 @@
       </div>
     </main>
 
-    <footer>
+    <!--End of content-->
+
+    <footer class="checkout-footer">
       <a href="https://www.flaticon.com/free-icons" title="icons"
         >Flag icons created by Freepik - Flaticon</a
       >
-      
+
       <div class="Social-Media">
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-tiktok"></i>
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-square-facebook"></i>
       </div>
-
     </footer>
   </body>
 </html>

@@ -1,0 +1,234 @@
+:root {
+  --clr-white: #ffffff;
+  --clr-mist: #fbf1f2;
+  --clr-cloud: #f2f8fc;
+  --clr-river: #98c5c9;
+  --clr-pine: #1d3f47;
+  --clr-pine-deep: #152b2f;
+  --clr-dark: #060c0d;
+  --clr-black: #000000;
+  --clr-golden: #d78c02;
+
+  --font-dramatic: "Permanent Marker", cursive;
+  --font-regular: "Montserrat", sans-serif;
+
+  --fw-reg: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 700;
+  --fw-bold: 800;
+
+  --fs-splash: 3.5rem;
+  --fs-bigbutton: 3rem;
+  --fs-h1: 2.25rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+
+* {
+  font-family: var(--font-regular);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color-scheme: dark;
+}
+
+body {
+  width: 100vw;
+}
+
+p {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+}
+
+h1 {
+  font-size: var(--fs-splash);
+  font-family: var(--font-dramatic);
+}
+
+main {
+  padding-top: 80px;
+  width: 100vw;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 75px;
+  width: 100%;
+  background: linear-gradient(to top, var(--clr-pine-deep), var(--clr-pine));
+  padding: 16px 16px 36px 8px;
+  padding-bottom: 8px;
+}
+
+.home-link {
+  max-height: 75px;
+  padding: 0px 22px 0px 8px;
+  flex: 161px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 22px;
+  padding-bottom: 8px;
+  flex: auto;
+}
+
+nav a {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  color: var(--clr-mist);
+}
+
+.hover-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-effect::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 16px);
+  height: 4px;
+  background-color: var(--clr-golden);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-effect:hover::after {
+  opacity: 1;
+}
+
+.icons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex: 65px;
+  padding: 0px 24px 8px 0px;
+  gap: 8px;
+}
+
+.icons img {
+  height: 30px;
+}
+/*home and successful checkout*/
+
+.home-splash {
+  background-image: url(images/home-splash.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 670px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-logo {
+  width: 360px;
+  outline: var(--clr-pine-deep) 1px;
+  margin-top: 25px;
+}
+
+.shop-jackets {
+  font-size: var(--fs-bigbutton);
+  font-family: var(--font-dramatic);
+  color: var(--clr-mist);
+  background: none;
+  border: solid var(--clr-golden) 5px;
+  padding: 8px 16px;
+  -webkit-text-stroke: inside var(--clr-black) 1px;
+  margin-left: 60%;
+  margin-bottom: 90px;
+}
+
+/*footer*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(to top, var(--clr-pine), var(--clr-pine-deep));
+  color: var(--clr-mist);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+ul {
+  list-style: none;
+  padding: 12px 8px;
+}
+
+.footer-title {
+  color: var(--clr-river);
+}
+
+li {
+  padding: 8px;
+  font-size: var(--fs-body);
+}
+
+.footer-other {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.Social-Media {
+  font-size: 35px;
+  padding: 4px;
+  color: var(--clr-mist);
+}
+
+.subscribe-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 250px;
+}
+
+#subscribe-mini {
+  border-radius: 25px;
+  height: 26px;
+  color: var(--clr-mist);
+  width: 250px;
+  padding-right: 4px;
+}
+
+::placeholder {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: var(--fw-reg);
+  font-size: var(--fs-body);
+  color: var(--clr-pine-deep);
+  background: var(--clr-mist);
+  padding: 16px;
+  text-align: end;
+}
+
+h2 {
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h2);
+}

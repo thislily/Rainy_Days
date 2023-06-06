@@ -12,42 +12,59 @@
       src="https://kit.fontawesome.com/dc8689d417.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/nav.js"></script>
     <title>Home | Rainy Days</title>
   </head>
 
   <body>
     <header>
       <a href="../index.html"
-        ><img src="../images/logo-inverted.png" alt="Rainy Days logo"
+        ><img
+          class="home-link"
+          src="../images/logo-inverted.svg"
+          alt="Rainy Days logo"
       /></a>
 
       <nav>
-        <a href="../html/collection.html">See Collection</a>
-        <a href="../html/sale.html">Shop Sale</a>
-        <a href="../html/our-story.html">Our Story</a>
-        <a href="../html/get-involved.html">Get Involved</a>
-        <a href="../html/contact-us.html">Contact Us</a>
+        <a class="hover-effect" href="../html/collection.html">
+          See Collection
+        </a>
+        <a class="hover-effect" href="../html/sale.html"> Shop Sale </a>
+        <a class="hover-effect" href="../html/our-story.html"> Our Story </a>
+        <a class="hover-effect" href="../html/get-involved.html"
+          >Get Involved</a
+        >
+        <a class="hover-effect" href="../html/contact-us.html">Contact Us</a>
       </nav>
 
       <div class="icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <img src="../images/icons/user.svg" alt="" />
+        <img src="../images/icons/cart-full.svg" alt="" />
       </div>
     </header>
 
     <main>
       <section class="home-splash">
-        <img
-          src="/images/RainyDays_logoText.svg"
-          alt="Rainy Days logo with motto 'Pushing the Comfort Zone' written underneath"
-        />
+        <h1 class="home-logo">
+          <img
+            src="/images/RainyDays_logoText.svg"
+            alt="Rainy Days logo with company motto 'Pushing the Comfort Zone' written underneath"
+          />
+        </h1>
+
         <button class="shop-jackets">Shop Jackets</button>
       </section>
     </main>
 
     <footer>
-      <div>
+      <div class="footer-nav">
         <ul>
           <li class="footer-title">Rainy Days</li>
           <li>About Us</li>
@@ -68,22 +85,40 @@
         </ul>
       </div>
 
-      <div class="Social-Media">
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-square-facebook"></i>
-      </div>
+      <div class="footer-other">
+        <div class="Social-Media-container">
+          <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-twitter Social-Media"></i
+          ></a>
+          <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-tiktok Social-Media"></i
+          ></a>
+          <a
+            href="http://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-instagram Social-Media"></i
+          ></a>
+          <a
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-square-facebook Social-Media"></i
+          ></a>
+        </div>
 
-      <div class="subscribe-footer">
-        <h3>Subscribe</h3>
-        <p>Sign up for pre-sale info and special insider deals</p>
-        <input
-          type="email"
-          name="subscribe"
-          id="subscribe-mini"
-          placeholder="Email Address"
-        />
+        <div class="subscribe-footer">
+          <h2>Subscribe</h2>
+          <label for="subscribe-mini"
+            >Sign up for pre-sale info and special insider deals</label
+          >
+          <input
+            type="email"
+            name="subscribe-mini"
+            id="subscribe-mini"
+            placeholder="Email Address"
+          />
+        </div>
       </div>
     </footer>
   </body>
