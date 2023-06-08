@@ -12,27 +12,75 @@
       src="https://kit.fontawesome.com/dc8689d417.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css">
     <title>Successful Checkout | Rainy Days</title>
   </head>
 
   <body>
     <header>
-      <a href="../index.html"
-        ><img src="../images/logo-inverted.png" alt="Rainy Days logo"
-      /></a>
-
-      <nav>
-        <a href="../html/collection.html">See Collection</a>
-        <a href="../html/sale.html">Shop Sale</a>
-        <a href="../html/our-story.html">Our Story</a>
-        <a href="../html/get-involved.html">Get Involved</a>
-        <a href="../html/contact-us.html">Contact Us</a>
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <a class="hover-effect" href="../html/collection.html">
+                See Collection
+              </a>
+            </li>
+            <span class="spacing-line"></span>
+            <li class="menu-item">
+              <a class="hover-effect" href="../html/sale.html"> Shop Sale </a>
+            </li>
+            <span class="spacing-line"></span>
+            <li class="menu-item">
+              <a class="hover-effect" href="../html/our-story.html">
+                Our Story
+              </a>
+            </li>
+            <span class="spacing-line"></span>
+            <li class="menu-item">
+              <a class="hover-effect" href="../html/get-involved.html"
+                >Get Involved</a
+              >
+            </li>
+            <span class="spacing-line"></span>
+            <li class="menu-item">
+              <a class="hover-effect" href="../html/contact-us.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <a href="../index.html"
+            ><img
+              class="logo home-link"
+              src="../images/logo-inverted.svg"
+              alt="Rainy Days logo"
+          /></a>
+        </div>
       </nav>
 
       <div class="icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <a href="login.html"
+          ><img
+            src="../images/icons/user.svg"
+            alt="user icon. opens login page"
+        /></a>
+        <a href="checkout.html"
+          ><img
+            src="../images/icons/cart.svg"
+            alt="cart icon. opens checkout page"
+        /></a>
       </div>
     </header>
 
@@ -41,51 +89,72 @@
         <h1>Your Order Is Sent!</h1>
         <p>
           If you do not receive an email confirmation soon, please contact our
-          support staff <a href="../html/contact-us.html">here.</a> Your order
-          tracking number is #<span id="order-tracking-number">1</span>.
+          support staff <a href="../html/contact-us.html">here.</a> 
         </p>
-        <button class="continue-button">Continue...</button>
+        <p>Your order
+          tracking number is #<span id="order-tracking-number">905</span>.</p>
+        <button class="continue-button"><a href="../index.html">Continue</a> </button>
       </section>
     </main>
 
     <footer>
-      <div>
+      <div class="footer-nav">
         <ul>
           <li class="footer-title">Rainy Days</li>
-          <li>About Us</li>
-          <li>Find a Store</li>
-          <li>Fabric Care and Maintenance</li>
-          <li>DIY Repairs</li>
-          <li>Activism</li>
-          <li>Gift Cards</li>
+          <li><a href="html/our-story.html">About Us</a></li>
+          <li><a href="html/contact-us.html">Find a Store</a></li>
+          <li>
+            <a href="html/information.html">Fabric Care</a>
+          </li>
+          <li><a href="html/information.html">DIY Repairs</a></li>
+          <li><a href="html/our-story.html">Activism</a></li>
+          <li><a href="html/items/gift-card.html">Gift Cards</a></li>
         </ul>
         <ul>
           <li class="footer-title">Get Help</li>
-          <li>Contact Us</li>
-          <li>Sizing Guide</li>
-          <li>Returns or Exchanges</li>
-          <li>Order Tracking</li>
-          <li>Shipping Information</li>
-          <li>Give Feedback</li>
+          <li><a href="html/contact-us.html">Contact Us</a></li>
+          <li><a href="html/information.html">Sizing Guide</a></li>
+          <li><a href="html/information.html">Returns or Exchanges</a></li>
+          <li><a href="html/login.html">Order Tracking</a></li>
+          <li><a href="html/information.html">Shipping Information</a></li>
+          <li><a href="html/contact-us.html">Give Feedback</a></li>
         </ul>
       </div>
 
-      <div class="Social-Media">
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-square-facebook"></i>
-      </div>
+      <div class="footer-other">
+        <div class="Social-Media-container">
+          <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-twitter Social-Media"></i
+          ></a>
+          <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-tiktok Social-Media"></i
+          ></a>
+          <a
+            href="http://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-instagram Social-Media"></i
+          ></a>
+          <a
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-square-facebook Social-Media"></i
+          ></a>
+        </div>
 
-      <div class="subscribe-footer">
-        <h3>Subscribe</h3>
-        <p>Sign up for pre-sale info and special insider deals</p>
-        <input
-          type="email"
-          name="subscribe"
-          id="subscribe-mini"
-          placeholder="Email Address"
-        />
+        <div class="subscribe-footer">
+          <h2>Subscribe here</h2>
+          <label id="subscribe-label" for="subscribe-mini"
+            >Sign up for pre-sale info and special insider deals</label
+          >
+          <input
+            type="email"
+            name="subscribe-mini"
+            id="subscribe-mini"
+            placeholder="Email Address   "
+          />
+        </div>
       </div>
     </footer>
   </body>

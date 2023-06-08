@@ -8,6 +8,8 @@
   --clr-dark: #060c0d;
   --clr-black: #000000;
   --clr-golden: #d78c02;
+  --clr-golden-light: hsl(39, 98%, 43%, 30%);
+  --clr-button-background: hsl(0, 0%, 0%, 30%);
 
   --font-dramatic: "Permanent Marker", cursive;
   --font-regular: "Montserrat", sans-serif;
@@ -163,13 +165,11 @@ header {
 /*HOME AND SUCCESSFUL CHECKOUTt*/
 
 .home-splash {
-  background-color: var(--clr-dark);
-  background-image: url(../images/home-splash.jpg);
-  background-size: fill;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 670px;
+  background: url(../images/home-splash.jpg) no-repeat center center fixed;
+  background-size: cover;
   width: 100%;
+  min-height: 670px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -184,19 +184,85 @@ header {
 
 .shop-jackets {
   width: auto;
-  background: none;
+  background-color: var(--clr-button-background);
   border: solid var(--clr-golden) 5px;
   padding: 8px 16px;
   margin-left: 60%;
   margin-bottom: 90px;
 }
 
+.shop-jackets:hover{
+  background-color: var(--clr-golden-light);
+}
+
 .shop-jackets a {
   font-size: var(--fs-bigbutton);
   font-family: var(--font-dramatic);
-  color: var(--clr-mist);
+  color: var(--clr-white);
   text-decoration: none;
 }
+
+.shop-jackets a:hover{
+  color: var(--clr-white);
+}
+
+.successful-checkout-splash {
+  background: url(../images/successful-checkout-splash-large.png) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 670px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.successful-checkout-splash h1 {
+  margin-top: 100px;
+  color: var(--clr-black);
+  text-align: center;
+}
+
+.successful-checkout-splash p{
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+  color: var(--clr-black);
+  max-width: 750px;
+  padding: 8px 16px 8px 16px;
+  text-align: center;
+}
+
+.successful-checkout-splash p a {
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-black);
+}
+
+#order-tracking-number {
+  font-weight: var(--fw-semi-bold);
+  text-decoration: underline;
+}
+
+.continue-button {
+  width: auto;
+  background: none;
+  border: solid var(--clr-golden) 5px;
+  padding: 8px 16px;
+  margin: 150px 0px 0px 60%;
+}
+
+.continue-button a {
+  font-size: var(--fs-bigbutton);
+  font-family: var(--font-dramatic);
+  color: var(--clr-black);
+  text-decoration: none;
+}
+
+.continue-button:hover{
+  background-color: var(--clr-golden-light);
+}
+
+
 
 /*FOOTER*/
 
@@ -297,14 +363,16 @@ h2 {
   .shop-jackets a {
     font-size: var(--fs-splash-mini);
   }
+
+  .continue-button a {
+    font-size: var(--fs-splash-mini);
+  }
 }
 
 /* medium */
 
 @media screen and (max-width: 900px) {
-  .shop-jackets {
-    width: 165px;
-  }
+
   .navbar {
     opacity: 0.95;
   }
@@ -455,12 +523,27 @@ h2 {
     width: auto;
   }
 
+  .continue-button {
+    margin: auto;
+    margin-bottom: 10%;
+    width: auto;
+  }
+
+  .continue-button a {
+    color: var(--clr-white);
+  }
+
+  .successful-checkout-splash h1{
+    font-size: var(--fs-splash-mini);
+  }
+
   footer {
     flex-direction: column;
     min-height: 275px;
     padding: 12px;
     padding-bottom: 20px;
   }
+
 
   .footer-nav {
     padding: 2px;
@@ -478,7 +561,7 @@ h2 {
 
   .footer-other {
     flex-direction: row;
-    padding: 16px 16px 16px 4px ;
+    padding: 16px 16px 16px 4px;
   }
 
   .Social-Media {
@@ -508,12 +591,12 @@ h2 {
     padding-right: 8px;
   }
 
-  footer{
+  footer {
     padding-left: 8px;
     padding-right: 8px;
   }
 
-  .footer-nav{
+  .footer-nav {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -526,22 +609,22 @@ h2 {
     padding-right: 0px;
   }
 
-  .footer-other{
+  .footer-other {
     padding-right: 0px;
   }
 
-  .subscribe-footer{
+  .subscribe-footer {
     padding: 0px;
     width: 216px;
   }
 
-  #subscribe-mini{
+  #subscribe-mini {
     width: 200px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .Social-Media-container{
+  .Social-Media-container {
     width: 70px;
   }
 }
