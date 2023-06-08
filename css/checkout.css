@@ -39,28 +39,6 @@ main {
   min-height: 100vh;
 }
 
-/*HEADER*/
-
-header {
-  height: 48px;
-  grid-template-columns: 115px auto 1fr;
-}
-
-header a {
-  padding: 0px;
-}
-
-.home-link {
-  height: 40px;
-}
-
-nav {
-  align-items: flex-end;
-}
-
-nav a {
-  font-size: var(--fs-body);
-}
 
 /*TITLE*/
 
@@ -68,7 +46,7 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .continue-shopping {
@@ -79,6 +57,7 @@ nav a {
   flex-direction: column;
   min-width: 250px;
   padding: 24px 24px 0px;
+  z-index: 0;
 }
 
 .underline {
@@ -86,6 +65,7 @@ nav a {
   background-color: var(--clr-river);
   border-radius: 50px;
   height: 4px;
+  
 }
 
 a {
@@ -98,6 +78,7 @@ a {
   color: var(--clr-dark);
   text-decoration: none;
   padding: 0px;
+  
 }
 
 .fa-arrow-left {
@@ -220,8 +201,11 @@ h3 {
 #gift-card-quantity,
 #fleece-zip-quantity {
   border: 1px solid var(--clr-black);
+  background-color: var(--clr-white);
+  color: var(--clr-black);
   text-align: center;
   padding: 2px;
+  max-width: 40px;
 }
 
 .product-checkout-cost {
@@ -271,6 +255,27 @@ h3 {
 .pick-country {
   display: flex;
   padding-bottom: 42px;
+}
+
+#country{
+  border: 1px solid var(--clr-black);
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  text-align: center;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  padding: 2px;
+}
+
+#country option {
+    text-decoration: none;
+    border: 1px solid var(--clr-black);
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    text-align: center;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
+    padding: 2px;
 }
 
 input[type="text"],
@@ -372,7 +377,6 @@ input[type="checkbox"] {
   display: flex;
   width: 510px;
   justify-content: space-between;
-  align-items: ;
   padding: 16px 0px;
   margin: auto;
 }
@@ -451,12 +455,14 @@ input[type="checkbox"] {
 
 .checkout-footer {
   height: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .checkout-footer a {
   color: #98c5c9;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding-top: 50px;
   font-size: 12px;
 }
+
+
