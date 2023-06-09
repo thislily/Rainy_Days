@@ -1,0 +1,357 @@
+:root {
+  --clr-white: #ffffff;
+  --clr-mist: #fbf1f2;
+  --clr-cloud: #f2f8fc;
+  --clr-river: #98c5c9;
+  --clr-pine: #1d3f47;
+  --clr-pine-deep: #152b2f;
+  --clr-dark: #060c0d;
+  --clr-black: #000000;
+  --clr-golden: #d78c02;
+  --clr-golden-light: hsl(39, 98%, 43%, 30%);
+  --clr-button-background: hsl(0, 0%, 0%, 30%);
+
+  --font-dramatic: "Permanent Marker", cursive;
+  --font-regular: "Montserrat", sans-serif;
+
+  --fw-reg: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 700;
+  --fw-bold: 800;
+
+  --fs-splash: 3.5rem;
+  --fs-bigbutton: 3rem;
+  --fs-h1: 2.25rem;
+  --fs-splash-mini: 2rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+
+* {
+  color-scheme: light;
+}
+
+/*OUR STORY*/
+
+.our-story-bg {
+  background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom center
+    fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 670px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-splash {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 250px;
+  padding: 24px 24px 0px;
+  z-index: 0;
+}
+
+h1 {
+  font-size: var(--fs-splash);
+  padding-top: 56px;
+}
+
+.underline {
+  width: 100%;
+  padding: 0px 36px 0px;
+  background-color: var(--clr-river);
+  border-radius: 50px;
+  height: 10px;
+  margin-bottom: 72px;
+}
+
+.p-title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  max-width: 400px;
+  padding: 22px;
+  text-align: center;
+  flex: auto;
+}
+
+section {
+  max-width: 1000px;
+}
+
+.text-image-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 36px;
+}
+
+.desktop-image {
+  max-width: 480px;
+  padding: 22px;
+}
+
+.mobile-image {
+  display: none;
+}
+
+p {
+  max-width: 480px;
+  padding: 24px 24px 0px;
+  flex: auto;
+}
+
+/*GET INVOLVED*/
+
+.get-involved-bg {
+  background: url(../images/get-involved/get-involved-bg.jpg) no-repeat center
+    fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 670px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gi-mobile-splash {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 250px;
+  padding: 24px 24px 0px;
+  z-index: 0;
+}
+
+.gi-text-image-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 36px;
+}
+
+.gi-p-title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  max-width: 2750px;
+  padding: 22px 22px 0px;
+  text-align: center;
+  flex: auto;
+}
+
+.gi-text-box-1 {
+  display: flex;
+  height: 260px;
+  width: 40%;
+  flex-direction: column;
+}
+.gi-image-box-1 {
+  display: flex;
+  height: 274px;
+  width: 60%;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 24px 24px 0px;
+}
+
+.gi-text-box-2 {
+  display: flex;
+  height: 260px;
+  width: auto;
+  flex-direction: column;
+}
+.gi-image-box-2 {
+  display: flex;
+  height: 274px;
+  width: 360px;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 24px;
+}
+
+.charity-logos {
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 36px auto 72px;
+}
+.charity-logo {
+  padding: 10px;
+  margin: 12px;
+  border: var(--clr-white) 5px solid;
+  box-shadow: 4px 8px 12px grey;
+}
+
+.charity-logo:hover {
+  border: var(--clr-river) 5px solid;
+  animation: ease 3ms;
+}
+
+/*MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+  .mobile-splash {
+    background: url(../images/our-story/our-story-mobile-1.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px 0px 36px;
+  }
+
+  h1 {
+    font-size: var(--fs-splash-mini);
+    width: 260px;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .underline {
+    width: 140px;
+    height: 8px;
+  }
+
+  section {
+    max-width: 700px;
+    align-items: center;
+  }
+
+  .p-title {
+    font-size: var(--fs-h2);
+    max-width: 700px;
+    text-align: center;
+    padding: 0px;
+    margin-top: 36px;
+  }
+
+  .text-image-box {
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: flex;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 36px 0px 36px;
+    padding: 0px;
+  }
+
+  .get-involved-bg {
+    background-position: top;
+  }
+
+  .gi-mobile-splash {
+    background: url(../images/get-involved/activism-m1.png);
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px 0px 36px;
+  }
+
+  .gi-text-image-box {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 36px;
+    max-width: 700px;
+  }
+
+  .gi-p-title {
+    font-size: var(--fs-h2);
+  }
+
+  .gi-text-box-1 {
+    display: flex;
+    height: auto;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gi-text-box-2 {
+    display: flex;
+    height: auto;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gi-image-box-1 {
+    display: none;
+  }
+
+  .gi-image-box-2 {
+    display: none;
+  }
+
+  .gi-image-box-m {
+    display: flex;
+    flex-direction: row;
+    height: 274px;
+    width: 575px;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .p-mobile {
+    padding: 24px 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #image-to-none {
+    display: none;
+  }
+
+  .gi-image-box-m {
+    width: 80%;
+    gap: 16px;
+  }
+
+  .charity-logo {
+    max-width: 300px;
+  }
+
+  p {
+    align-items: center;
+    margin: 18px 0px 18px;
+  }
+}
