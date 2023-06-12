@@ -140,6 +140,25 @@ header {
   transition: opacity 0.3s ease;
 }
 
+.current-page {
+  position: relative;
+  display: inline-block;
+}
+
+.current-page::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 16px);
+  height: 4px;
+  background-color: var(--clr-golden);
+  border-radius: 2px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
 .hover-effect:hover::after {
   opacity: 1;
 }
@@ -318,6 +337,10 @@ footer {
   font-size: 35px;
   padding: 4px;
   color: var(--clr-mist);
+}
+
+.fa-brands:hover{
+  color: var(--clr-river);
 }
 
 .subscribe-footer {

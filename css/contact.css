@@ -33,13 +33,11 @@
 }
 
 .contact-us-bg {
-  background: url(../images/contact-us-bg.png) no-repeat center
-    fixed;
+  background: url(../images/contact-us-bg.png) no-repeat center fixed;
   background-size: cover;
   width: 100%;
   min-height: 670px;
   overflow: hidden;
-  
 }
 
 .title-box {
@@ -70,6 +68,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
+  padding: 0px 24px;
   max-width: 1000px;
   gap: 36px;
 }
@@ -83,31 +82,300 @@ h1 {
   margin: 44px 0px;
   padding: 22px;
   border-radius: 25px;
-  box-shadow:-2px 4px 8px rgb(131, 128, 128);
+  box-shadow: -2px 4px 8px rgb(131, 128, 128);
 }
 
+/*CONTACT INFO*/
 .contact-info {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.contact-info h2 {
+  margin-bottom: 28px;
+}
+
+address {
+  font-style: normal;
+  gap: 8px;
+}
+
+address p {
+  padding: 8px 0px 0px 100px;
+  padding-left: 16px;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+}
+
+.row a {
+  padding-left: 16px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+section {
+  justify-content: space-between;
+}
+
+/*SEND US A MESSAGE*/
 
 .send-message {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.send-message input {
+  border: 1px var(--clr-black) solid;
+  min-height: 30px;
+  padding: 4px 6px;
+  width: 97.5%;
+}
+
+#message {
+  height: 64px;
+}
+
+#send-message-btn {
+  border: 5px solid var(--clr-golden);
+  width: 88px;
+  height: 42px;
+  margin: 8px auto 8px;
+  background-color: var(--clr-white);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semi-bold);
+}
+
+#send-message-btn a {
+  text-decoration: none;
+  color: var(--clr-black);
+}
+
+#send-message-btn:hover {
+  background-color: var(--clr-golden-light);
+}
+
+/*FIND A STORE*/
 
 .find-store {
   margin: 0px auto 72px;
-  width: 956px;
+  max-width: 956px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-address{
-    font-style: normal;
+.find-store-box {
+  padding: 0px 24px 0px;
 }
 
-h2{
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-bold);
+.location-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 480px;
+  margin: 0px auto;
+  padding-right: 24px;
 }
 
-section{
-justify-content: space-around;
+.location {
+  width: 342px;
+  height: 56px;
+  border: 1px var(--clr-black) solid;
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px;
+  align-items: center;
+  text-align: left;
+}
+
+.location:hover {
+  background-color: var(--clr-river);
+  box-shadow: 1px 4px 6px lightgrey;
+}
+
+.selected-location {
+  background-color: var(--clr-river);
+}
+
+.map-container {
+  border: 1px var(--clr-black) solid;
+  padding: 0px;
+  margin-right: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 540px;
+  height: 480px;
+}
+
+.map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 820px) {
+  .title-box {
+    margin: 0px auto 0px;
+  }
+
+  h1 {
+    font-size: var(--fs-splash-mini);
+    width: 260px;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .underline {
+    width: 140px;
+    height: 8px;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .contact-container {
+    min-height: 100px;
+    margin-bottom: 0px;
+  }
+  .contact-info,
+  .send-message {
+    margin: 44px auto;
+    padding: 22px;
+    width: 600px;
+  }
+  .contact-info {
+    justify-content: flex-start;
+    height: 172px;
+    margin-bottom: 0px;
+  }
+
+  address {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .location {
+    width: 280px;
+  }
+
+  .find-store {
+    width: 600px;
+    margin-bottom: 56px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact-info,
+  .send-message,
+  .find-store {
+    width: 322px;
+    height: fit-content;
+    margin-bottom: 24px;
+    margin-top: 0px;
+  }
+
+  h1 {
+    margin-top: 24px;
+    padding-top: 0px;
+  }
+
+  .underline {
+    margin-bottom: 36px;
+  }
+
+  .send-message input {
+    width: 95%;
+  }
+
+  .contact-box {
+    padding: 0px;
+    margin: auto;
+  }
+
+  .find-store-box {
+    padding: 0px;
+    margin: auto;
+  }
+  .row {
+    flex-direction: row;
+  }
+
+  address {
+    flex-direction: column;
+    height: 260px;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+
+  .find-store {
+    flex-direction: column;
+  }
+
+  .location-box {
+    width: 316px;
+    height: 300px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-right: 0px;
+  }
+  .location-box h2 {
+    margin: auto;
+    padding: 0px 36px;
+  }
+
+  .location {
+    width: 152px;
+    height: 72px;
+    align-items: flex-start;
+  }
+
+  .location p {
+    font-size: 14px;
+  }
+
+  .location img {
+    display: none;
+  }
+
+  .map-container {
+    width: 316px;
+    height: 288px;
+    margin: 24px auto 0px;
+  }
 }

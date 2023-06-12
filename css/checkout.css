@@ -491,7 +491,6 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 700px) {
-
   .continue-shopping {
     max-width: 210px;
     padding: 16px 0px 16px;
@@ -502,11 +501,11 @@ input[type="checkbox"] {
     width: 210px;
   }
 
-  .centered-logo{
+  .centered-logo {
     width: 170px;
   }
 
-  h1{
+  h1 {
     font-size: var(--fs-h2);
     font-weight: var(--fw-medium);
   }
@@ -521,9 +520,9 @@ input[type="checkbox"] {
   .fa-arrow-left {
     font-size: 16px;
   }
-.locked{
-  padding: 0px;
-}
+  .locked {
+    padding: 0px;
+  }
 
   .lock {
     width: 26px;
@@ -592,7 +591,7 @@ input[type="checkbox"] {
     width: 328px;
   }
 
-  .radio-box:last-child{
+  .radio-box:last-child {
     margin-bottom: 0px;
   }
 
@@ -619,12 +618,12 @@ input[type="checkbox"] {
     padding: 18px 18px 8px 18px;
   }
 
-  .small-letters{
+  .small-letters {
     width: 330px;
     margin: 22px auto 22px;
   }
 
-  .last-container{
+  .last-container {
     margin-bottom: 100px;
   }
 }
