@@ -30,12 +30,11 @@
 }*/
 
 main {
-  background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom fixed; 
-  
+  background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom fixed;
+  background: cover;
   width: 100%;
   overflow: hidden;
 }
-
 
 .title-box {
   margin: 56px auto 0px;
@@ -190,8 +189,6 @@ h1 {
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 1175px) {
-
-
   .title-box {
     margin: 50px auto 30px;
     max-width: 95%;
@@ -283,7 +280,6 @@ h1 {
   main {
     background: url(../images/long-bg.png) no-repeat bottom fixed;
   }
-
 }
 
 @media screen and (max-width: 385px) {
