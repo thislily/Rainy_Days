@@ -6,6 +6,7 @@
   --clr-river: #98c5c9;
   --clr-pine: #1d3f47;
   --clr-pine-deep: #152b2f;
+  --clr-pine-light: hsl(191, 42%, 20%, 75%);
   --clr-dark: #060c0d;
   --clr-black: #000000;
   --clr-golden: #d78c02;
@@ -32,6 +33,7 @@
 main {
   background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom fixed;
   background: cover;
+  background-color:var(--clr-pine-light);
   width: 100%;
   overflow: hidden;
 }
