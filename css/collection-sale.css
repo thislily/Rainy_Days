@@ -190,10 +190,8 @@ h1 {
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 1175px) {
-  main {
-    background: url(../images/long-bg.png) no-repeat bottom fixed;
-    min-height: calc(100vh - 304px);
-  }
+
+
   .title-box {
     margin: 50px auto 30px;
     max-width: 95%;
@@ -280,6 +278,10 @@ h1 {
 @media screen and (max-width: 900px) {
   .title-box {
     margin-top: 36px;
+  }
+
+  main {
+    background: url(../images/long-bg.png) no-repeat bottom fixed;
   }
 
 }
