@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --clr-white: #ffffff;
   --clr-white-light: rgba(255, 255, 255, 0.3);
   --clr-mist: #fbf1f2;
@@ -27,27 +27,15 @@
   --fs-h2: 1.5rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-}
-
-* {
-  color-scheme: light;
-}
+}*/
 
 main {
-  background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom fixed;
-  background-size: cover;
+  background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom fixed; 
+  
   width: 100%;
-  min-height: 670px;
   overflow: hidden;
 }
 
-.sale-bg{
-    background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom fixed;
-    background-size: cover;
-    width: 100%;
-    min-height: 670px;
-    overflow: hidden;
-}
 
 .title-box {
   margin: 56px auto 0px;
@@ -93,6 +81,11 @@ h1 {
   box-shadow: 1px 4px 6px lightgrey;
   border-radius: 5px;
   padding: 8px;
+}
+
+.product a {
+  text-decoration: none;
+  color: var(--clr-black);
 }
 
 .product img {
@@ -197,6 +190,10 @@ h1 {
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 1175px) {
+  main {
+    background: url(../images/long-bg.png) no-repeat bottom fixed;
+    min-height: calc(100vh - 304px);
+  }
   .title-box {
     margin: 50px auto 30px;
     max-width: 95%;
@@ -253,7 +250,7 @@ h1 {
     padding: 8px;
   }
 
-  .subscribe-button{
+  .subscribe-button {
     margin-bottom: 22px;
   }
 
@@ -280,16 +277,17 @@ h1 {
   }
 }
 
-@media screen and (max-width: 900px){
-    .title-box{
-        margin-top: 36px;
-    }
+@media screen and (max-width: 900px) {
+  .title-box {
+    margin-top: 36px;
+  }
+
 }
 
 @media screen and (max-width: 385px) {
-    .title-box{
-        margin-top: 22px;
-    }
+  .title-box {
+    margin-top: 22px;
+  }
   .products {
     gap: 8px;
     padding: 0px 4px;

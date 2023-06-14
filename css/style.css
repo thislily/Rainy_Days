@@ -5,6 +5,7 @@
   --clr-river: #98c5c9;
   --clr-pine: #1d3f47;
   --clr-pine-deep: #152b2f;
+  --clr-pine-light: hsl(191, 42%, 20%, 75%);
   --clr-dark: #060c0d;
   --clr-black: #000000;
   --clr-golden: #d78c02;
@@ -33,11 +34,13 @@
   margin: 0;
   padding: 0;
   border: 0;
-  color-scheme: dark;
 }
 
 body {
   min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -51,8 +54,11 @@ h1 {
 }
 
 main {
+  background-color: var(--clr-cloud);
   padding-top: 50px;
-  min-width: 100%;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -184,6 +190,7 @@ header {
 /*HOME AND SUCCESSFUL CHECKOUTt*/
 
 .home-splash {
+  background-color: var(--clr-pine-light);
   background: url(../images/home-splash.jpg) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
@@ -210,7 +217,7 @@ header {
   margin-bottom: 90px;
 }
 
-.shop-jackets:hover{
+.shop-jackets:hover {
   background-color: var(--clr-golden-light);
 }
 
@@ -221,12 +228,13 @@ header {
   text-decoration: none;
 }
 
-.shop-jackets a:hover{
+.shop-jackets a:hover {
   color: var(--clr-white);
 }
 
 .successful-checkout-splash {
-  background: url(../images/successful-checkout-splash-large.png) no-repeat center center fixed;
+  background: url(../images/successful-checkout-splash-large.png) no-repeat
+    center fixed;
   background-size: cover;
   width: 100%;
   min-height: 670px;
@@ -243,7 +251,7 @@ header {
   text-align: center;
 }
 
-.successful-checkout-splash p{
+.successful-checkout-splash p {
   font-size: var(--fs-body);
   font-weight: var(--fw-reg);
   color: var(--clr-black);
@@ -277,15 +285,14 @@ header {
   text-decoration: none;
 }
 
-.continue-button:hover{
+.continue-button:hover {
   background-color: var(--clr-golden-light);
 }
-
-
 
 /*FOOTER*/
 
 footer {
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   padding: 16px;
@@ -339,7 +346,7 @@ footer {
   color: var(--clr-mist);
 }
 
-.fa-brands:hover{
+.fa-brands:hover {
   color: var(--clr-river);
 }
 
@@ -381,6 +388,12 @@ h2 {
 
 /* MEDIA QUERIES */
 
+/*tall*/
+@media (orientation: portrait) {
+  .home-splash {
+    background: url(../images/home-splash.jpg) no-repeat top fixed;
+  }
+}
 /* medium+ */
 @media screen and (max-width: 950px) {
   .shop-jackets a {
@@ -395,7 +408,6 @@ h2 {
 /* medium */
 
 @media screen and (max-width: 900px) {
-
   .navbar {
     opacity: 0.95;
   }
@@ -530,6 +542,10 @@ h2 {
     width: 315px;
     margin-top: 25px;
   }
+
+  .current-page::after {
+    display: none;
+  }
 }
 
 /* small */
@@ -556,7 +572,7 @@ h2 {
     color: var(--clr-white);
   }
 
-  .successful-checkout-splash h1{
+  .successful-checkout-splash h1 {
     font-size: var(--fs-splash-mini);
   }
 
@@ -566,7 +582,6 @@ h2 {
     padding: 12px;
     padding-bottom: 20px;
   }
-
 
   .footer-nav {
     padding: 2px;
