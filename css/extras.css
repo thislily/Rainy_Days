@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --clr-white: #ffffff;
   --clr-mist: #fbf1f2;
   --clr-cloud: #f2f8fc;
@@ -27,7 +27,7 @@
   --fs-h2: 1.5rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-}
+}*/
 
 a {
   text-decoration: none;
@@ -92,7 +92,7 @@ a {
 .winter-sale-full {
   background: var(--clr-white);
   border: 2px var(--clr-mist) solid;
-  box-shadow: -2px 4px 2px #dadfe3;
+  box-shadow: -2px 6px 15px #444444;
   border-radius: 25px;
   width: 80%;
   max-width: 1000px;
@@ -168,6 +168,7 @@ a {
 .beyond-sustainability h2 {
   font-size: var(--fs-h1);
   font-weight: var(--fw-bold);
+  color:var(--clr-river);
   margin: 16px auto;
   text-align: center;
   width: 80%;
@@ -295,7 +296,7 @@ a {
   background-image: url(../images/extras/browse-collection.png);
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: -2px 4px 2px #dadfe3;
+  box-shadow: -2px 6px 15px #444444;
   display: flex;
   align-items: flex-end;
   border-radius: 0px 25px 25px 0px;
@@ -313,7 +314,7 @@ a {
   background-image: url(../images/extras/winter-sale.png);
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: -2px 4px 2px #dadfe3;
+  box-shadow: -2px 6px 15px #444444;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

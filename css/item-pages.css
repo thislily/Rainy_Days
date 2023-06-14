@@ -30,8 +30,8 @@
 }*/
 
 main {
-  background: url(../images/item-page-bg.jpg) no-repeat center fixed;
-  min-height: calc(100vh - 304px);
+  background: url(../images/item-page-bg.jpg) no-repeat bottom fixed;
+  
 }
 
 .top-container {
@@ -84,7 +84,7 @@ a {
   background-color: var(--clr-white);
   border: var(--clr-mist) 1px solid;
   border-radius: 25px;
-  box-shadow: 0px 4px 4px var(--clr-button-background);
+  box-shadow: -2px 6px 15px #444444;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -226,7 +226,7 @@ input[type="radio"] {
   background-color: var(--clr-white);
   border: var(--clr-mist) 1px solid;
   border-radius: 25px;
-  box-shadow: 0px 4px 4px var(--clr-button-background);
+  box-shadow: -2px 6px 15px #444444;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -282,17 +282,17 @@ input[type="radio"] {
     gap: 36px;
   }
 
-  h1 {
+  .item-container h1 {
     font-family: var(--font-regular);
     font-size: var(--fs-h2);
     font-weight: var(--fw-bold);
   }
 
-  p {
+  .item-container p {
     font-size: var(--fs-body);
   }
 
-  h3 {
+  .item-container h3 {
     font-size: var(--fs-body);
   }
 
@@ -301,11 +301,20 @@ input[type="radio"] {
   }
 }
 
+@media screen and (max-width: 900px){
+  .gift-card-information {
+    width: 500px;
+    padding: 8px 0px 16px;
+    gap: 16px;
+}
+.gift-card-information p{
+  text-align: center;
+}
+
+}
+
 @media screen and (max-width: 800px) {
-  main {
-    background: url(../images/long-bg.png) no-repeat bottom fixed;
-    min-height: calc(100vh - 304px);
-  }
+
 
   .item-container {
     flex-direction: column;
@@ -333,7 +342,33 @@ input[type="radio"] {
     gap: 26px;
   }
 
-  main {
-    min-height: calc(100vh - 400px);
-  }
+
+
+
+}
+
+@media screen and (max-width: 550px){
+  .gift-card-information {
+    width: 340px;
+    padding: 8px 0px 16px;
+    gap: 16px;
+}
+..gift-card-information h1 {
+  font-family: var(--font-regular);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+}
+
+.gift-card-information p {
+  font-size: var(--fs-body);
+}
+
+.gift-card-information h3 {
+  font-size: var(--fs-body);
+}
+
+.amount-bubble {
+  padding: 4px 4px;
+}
+
 }

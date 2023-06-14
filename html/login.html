@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="Collection | Rainy Days"
-      content="View our entire collection of eco-friendly and affordable outerwear, for those of us who can't sit inside for even one more minute!"
+      name="Login or Make an Account | Rainy Days"
+      content="Log in to your account or register to make a new one."
     />
     <script
       src="https://kit.fontawesome.com/dc8689d417.js"
@@ -19,9 +19,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/collection-sale.css" />
-    <link rel="stylesheet" href="../css/extras.css">
-    <title>Collection | Rainy Days</title>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/extras.css" />
+    <title>Login or Make an Account | Rainy Days</title>
   </head>
   <body>
     <header>
@@ -88,91 +88,143 @@
     <!--content begins-->
 
     <main>
-      <div>
-        <div class="log-in">
-          <h2>Already have an account?</h2>
-          <i class="fa-solid fa-user"></i>
+      <div class="background">
+        <div class="login-widget">
+          <div class="toggle-box">
+            <button class="log-in">
+              <h2>Already have an account?</h2>
+              <img src="../images/icons/user-dark.svg" alt="user icon" />
+            </button>
+            <button class="make-account">
+              <h2>Not yet a member?</h2>
+              <img src="../images/icons/circle-plus.svg" alt="" />
+            </button>
+          </div>
+          <div class="enter-info">
+            <h1 id="login-title">Log in here</h1>
+            <div class="form">
+              <label for="email">Email address</label>
+              <input type="email" name="email" id="email" />
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+              <label for="retype">Retype password</label>
+              <input type="password" name="retype" id="retype" />
+              <button id="forgot-password">Forgot your password?</button>
+              <button id="reset-password">Reset password via email</button>
+            </div>
+          </div>
         </div>
-        <div class="make-account">
-          <h2>Not a member yet?</h2>
-          <i class="fa-solid fa-user-plus"></i>
-        </div>
-      </div>
 
-      <div class="enter-info">
-        <h1 id="login-title">Log in here</h1>
-        <label for="email">Email address</label>
-        <input type="email" name="email" id="email" />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <label for="retype">Retype password</label>
-        <input type="password" name="retype" id="retype" />
-        <button id="forgot-password">Forgot your password?</button>
-        <button id="reset-password">Reset password via email</button>
+        <section class="beyond-sustainability">
+          <h2>
+            Beyond sustainability, we prioritize the utmost comfort and
+            versatility in our designs.
+          </h2>
+          <div class="beyond-sustainability-row">
+            <div class="beyond-sustainability-text">
+              <p class="remove-text">
+                Our jackets are engineered to keep you warm, dry, and protected,
+                no matter the weather conditions. With innovative features likte
+                breathable linings, adjustable hoods, and ample pockets for
+                storage, our jackets are built to accompany you on all your
+                adventures.
+              </p>
+              <p>
+                By purchasing a Rainy Days jacket, you become part of a community
+                of environmentally conscious individuals who are passionate about
+                making a positive impact on the world. Join us in embracing
+                sustainable fashion and celebrate your commitment to both style
+                and sustainability.
+              </p>
+            </div>
+            <img
+              src="../../images/extras/beyond-sustainability.png"
+              alt="Two people constructing a jacket on a mannequin."
+            />
+          </div>
+        </section>
+
+        <section>
+          <a class="winter-sale-full" href="../html/sale.html">
+            <img 
+            class="remove-second"
+            src="../images/items/winter-sport.png" alt="a winter jacket" />
+            <h2>Get 30% off select styles during our annual Winter Sale</h2>
+            <img
+              src="../images/items/polar-extreme.png"
+              alt="a heavy winter jacket"
+            />
+            <img
+              class="remove-first"
+              src="../images/items/polar-sport.png"
+              alt="a sporty winter jacket"
+            />
+          </a>
+        </section>
       </div>
     </main>
 
-   <!--content ends-->
+    <!--content ends-->
 
-   <footer>
-    <div class="footer-nav">
-      <ul>
-        <li class="footer-title">Rainy Days</li>
-        <li><a href="html/our-story.html">About Us</a></li>
-        <li><a href="html/contact-us.html">Find a Store</a></li>
-        <li>
-          <a href="html/information.html">Fabric Care</a>
-        </li>
-        <li><a href="html/information.html">DIY Repairs</a></li>
-        <li><a href="html/our-story.html">Activism</a></li>
-        <li><a href="html/items/gift-card.html">Gift Cards</a></li>
-      </ul>
-      <ul>
-        <li class="footer-title">Get Help</li>
-        <li><a href="../html/contact-us.html">Contact Us</a></li>
-        <li><a href="../html/information.html">Sizing Guide</a></li>
-        <li><a href="../html/information.html">Returns or Exchanges</a></li>
-        <li><a href="../html/login.html">Order Tracking</a></li>
-        <li><a href="../html/information.html">Shipping Information</a></li>
-        <li><a href="../html/contact-us.html">Give Feedback</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-other">
-      <div class="Social-Media-container">
-        <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"
-          ><i class="fa-brands fa-twitter Social-Media"></i
-        ></a>
-        <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"
-          ><i class="fa-brands fa-tiktok Social-Media"></i
-        ></a>
-        <a
-          href="http://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="fa-brands fa-instagram Social-Media"></i
-        ></a>
-        <a
-          href="http://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="fa-brands fa-square-facebook Social-Media"></i
-        ></a>
+    <footer>
+      <div class="footer-nav">
+        <ul>
+          <li class="footer-title">Rainy Days</li>
+          <li><a href="../html/our-story.html">About Us</a></li>
+          <li><a href="../html/contact-us.html">Find a Store</a></li>
+          <li>
+            <a href="../html/information.html">Fabric Care</a>
+          </li>
+          <li><a href="../html/information.html">DIY Repairs</a></li>
+          <li><a href="../html/our-story.html">Activism</a></li>
+          <li><a href="../html/items/gift-card.html">Gift Cards</a></li>
+        </ul>
+        <ul>
+          <li class="footer-title">Get Help</li>
+          <li><a href="../html/contact-us.html">Contact Us</a></li>
+          <li><a href="../html/information.html">Sizing Guide</a></li>
+          <li><a href="../html/information.html">Returns or Exchanges</a></li>
+          <li><a href="../html/login.html">Order Tracking</a></li>
+          <li><a href="../html/information.html">Shipping Information</a></li>
+          <li><a href="../html/contact-us.html">Give Feedback</a></li>
+        </ul>
       </div>
 
-      <div class="subscribe-footer">
-        <h2>Subscribe here</h2>
-        <label id="subscribe-label" for="subscribe-mini"
-          >Sign up for pre-sale info and special insider deals</label
-        >
-        <input
-          type="email"
-          name="subscribe-mini"
-          id="subscribe-mini"
-          placeholder="Email Address   "
-        />
+      <div class="footer-other">
+        <div class="Social-Media-container">
+          <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-twitter Social-Media"></i
+          ></a>
+          <a href="http://tiktok.com" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-tiktok Social-Media"></i
+          ></a>
+          <a
+            href="http://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-instagram Social-Media"></i
+          ></a>
+          <a
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-square-facebook Social-Media"></i
+          ></a>
+        </div>
+
+        <div class="subscribe-footer">
+          <h2>Subscribe here</h2>
+          <label id="subscribe-label" for="subscribe-mini"
+            >Sign up for pre-sale info and special insider deals</label
+          >
+          <input
+            type="email"
+            name="subscribe-mini"
+            id="subscribe-mini"
+            placeholder="Email Address   "
+          />
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
