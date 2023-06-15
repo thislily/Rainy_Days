@@ -288,3 +288,12 @@ h1 {
     padding: 4px;
   }
 }
+
+/*tall*/
+@media (orientation: portrait) {
+  main {
+    background: url(../images/item-page-bg.jpg) no-repeat top fixed cover
+    ;
+  }
+}
+  
