@@ -292,8 +292,7 @@ h1 {
 /*tall*/
 @media (orientation: portrait) {
   main {
-    background: url(../images/item-page-bg.jpg) no-repeat top fixed cover
+    background: url(../images/item-page-bg.jpg) no-repeat top fixed
     ;
   }
 }
-  
