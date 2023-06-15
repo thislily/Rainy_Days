@@ -61,6 +61,10 @@ main {
   overflow: hidden;
 }
 
+a{
+  text-decoration: none;
+  color: var(--clr-black);
+}
 /* HEADER */
 
 header {
@@ -388,12 +392,7 @@ h2 {
 
 /* MEDIA QUERIES */
 
-/*tall*/
-@media (orientation: portrait) {
-  .home-splash {
-    background: url(../images/home-splash.jpg) no-repeat top fixed;
-  }
-}
+
 /* medium+ */
 @media screen and (max-width: 950px) {
   .shop-jackets a {
@@ -664,5 +663,13 @@ h2 {
 @media screen and (max-width: 425px) {
   .Social-Media-container {
     width: 70px;
+  }
+}
+
+
+/*tall*/
+@media (orientation: portrait) {
+  .home-splash {
+    background: url(../images/home-splash.jpg) no-repeat top fixed;
   }
 }

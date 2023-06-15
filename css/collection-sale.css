@@ -242,7 +242,7 @@ h1 {
     gap: 4px;
   }
 
-  .product-snapshot h3 {
+  .product-snapshot h2 {
     font-size: var(--fs-body);
     font-weight: var(--fw-medium);
   }
