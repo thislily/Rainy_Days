@@ -30,7 +30,7 @@
 }*/
 
 main {
-  background: url(../images/item-page-bg.jpg) no-repeat bottom fixed;
+  background: url(../images/item-page-bg.jpg) no-repeat bottom cover fixed;
   
 }
 
