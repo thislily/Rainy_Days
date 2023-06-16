@@ -266,9 +266,6 @@ h1 {
     margin-top: 36px;
   }
 
-  main {
-    background: url(../images/long-bg.png) no-repeat bottom fixed;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -292,7 +289,7 @@ h1 {
 /*tall*/
 @media (orientation: portrait) {
   main {
-    background: url(../images/item-page-bg.jpg) no-repeat top fixed
+    background: url(../images/sale-bg.jpg) no-repeat cover center fixed
     ;
   }
 }
