@@ -126,10 +126,30 @@ input {
   padding-left: 2%;
 }
 
+.log-in-now {
+  border: 5px solid var(--clr-golden);
+  width: 88px;
+  height: 42px;
+  margin: 16px auto 12px;
+  background-color: var(--clr-white);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semi-bold);
+}
+
+.log-in-now a {
+  text-decoration: none;
+  color: var(--clr-black);
+}
+
+.log-in-now:hover {
+  background-color: var(--clr-golden-light);
+}
+
 #forgot-password {
   border: none;
   background: none;
   padding: 8px;
+  padding-left: 0px;
   font-weight: var(--fw-bold);
   font-size: var(--fs-body);
 }
@@ -160,7 +180,7 @@ input {
 @media screen and (max-width: 600px) {
   .login-widget {
     width: 350px;
-    height: 450px;
+    height: 460px;
     flex-direction: column;
     margin: 56px auto;
   }
@@ -209,6 +229,11 @@ input {
 
   .form {
     width: 100%;
+  }
+
+  .log-in-now {
+    margin-top: 8px;
+    margin-left: 216px;
   }
 
   #forgot-password {
