@@ -66,6 +66,10 @@ a{
   color: var(--clr-black);
 }
 
+button{
+  color: var(--clr-black);
+}
+
 button a{
   text-decoration: none;
   color: var(--clr-black);
