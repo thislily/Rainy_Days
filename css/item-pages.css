@@ -353,7 +353,7 @@ input[type="radio"] {
     padding: 8px 0px 16px;
     gap: 16px;
 }
-..gift-card-information h1 {
+.gift-card-information h1 {
   font-family: var(--font-regular);
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);

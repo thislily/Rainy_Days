@@ -31,11 +31,16 @@
 }*/
 
 main {
-  background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom fixed;
-  background: cover;
-  background-color:var(--clr-pine-light);
-  width: 100%;
-  overflow: hidden;
+  background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom 
+  fixed;
+background-size: cover;
+width: 100%;
+min-height: 670px;
+overflow: hidden;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .title-box {
