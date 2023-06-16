@@ -205,20 +205,6 @@ h1 {
     justify-content: center;
   }
 
-  h1 {
-    color: var(--clr-dark);
-    font-size: var(--fs-splash-mini);
-    width: 206;
-    padding-top: 0px;
-  }
-
-  .underline {
-    width: 232px;
-    padding: 0px 12px 0px;
-    background-color: var(--clr-river);
-    border-radius: 50px;
-    height: 8px;
-  }
 
   .products {
     max-width: 900px;
@@ -269,6 +255,21 @@ h1 {
 @media screen and (max-width: 900px) {
   .title-box {
     margin-top: 36px;
+  }
+
+  h1 {
+    color: var(--clr-dark);
+    font-size: var(--fs-splash-mini);
+    width: 206;
+    padding-top: 0px;
+  }
+
+  .underline {
+    width: 232px;
+    padding: 0px 12px 0px;
+    background-color: var(--clr-river);
+    border-radius: 50px;
+    height: 8px;
   }
 
 }
