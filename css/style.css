@@ -61,16 +61,16 @@ main {
   overflow: hidden;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--clr-black);
 }
 
-button{
+button {
   color: var(--clr-black);
 }
 
-button a{
+button a {
   text-decoration: none;
   color: var(--clr-black);
 }
@@ -222,27 +222,21 @@ header {
 }
 
 .shop-jackets {
-  width: auto;
+  font-size: var(--fs-bigbutton);
+  font-family: var(--font-dramatic);
+  color: var(--clr-white);
+  text-decoration: none;
+  width: max-content;
   background-color: var(--clr-button-background);
   border: solid var(--clr-golden) 5px;
   padding: 8px 16px;
   margin-left: 60%;
   margin-bottom: 90px;
+  text-align: center;
 }
 
 .shop-jackets:hover {
   background-color: var(--clr-golden-light);
-}
-
-.shop-jackets a {
-  font-size: var(--fs-bigbutton);
-  font-family: var(--font-dramatic);
-  color: var(--clr-white);
-  text-decoration: none;
-}
-
-.shop-jackets a:hover {
-  color: var(--clr-white);
 }
 
 .successful-checkout-splash {
@@ -401,11 +395,11 @@ h2 {
 
 /* MEDIA QUERIES */
 
-
 /* medium+ */
-@media screen and (max-width: 950px) {
-  .shop-jackets a {
+@media screen and (max-width: 1000px) {
+  .shop-jackets{
     font-size: var(--fs-splash-mini);
+    width: max-content;
   }
 
   .continue-button a {
@@ -558,7 +552,7 @@ h2 {
 
 /* small */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .home-splash {
     background-image: url(../images/home-splash-mid.jpg);
     background-size: cover;
@@ -566,7 +560,7 @@ h2 {
 
   .shop-jackets {
     margin: auto;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     width: auto;
   }
 
@@ -674,7 +668,6 @@ h2 {
     width: 70px;
   }
 }
-
 
 /*tall*/
 @media (orientation: portrait) {
