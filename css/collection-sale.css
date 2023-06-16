@@ -294,7 +294,15 @@ h1 {
 /*tall*/
 @media (orientation: portrait) {
   main {
-    background: url(../images/sale-bg.jpg) no-repeat cover center fixed
-    ;
+    background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom 
+    fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 670px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   }
 }
