@@ -136,12 +136,11 @@ p {
 }
 
 /*MEDIA QUERIES*/
-@media screen and (min-width: 1375px){
-.arrow-up-icon{
+@media screen and (min-width: 1375px) {
+  .arrow-up-icon {
     right: 20%;
+  }
 }
-}
-
 
 @media screen and (max-width: 1175px) {
   .title-box {
@@ -176,23 +175,27 @@ p {
 
   .index {
     height: 360px;
-   
   }
 
   .index a {
-  
     height: 50px;
     display: flex;
-    
+
     padding-left: 36px;
     font-size: var(--fs-h3);
     font-weight: var(--fw-semi-bold);
-   
   }
 }
 
 @media screen and (max-width: 900px) {
   .arrow-up-icon {
     height: 36px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .arrow-up-icon {
+    bottom: 10%;
+    right: 10%;
   }
 }
