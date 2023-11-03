@@ -1,3 +1,7 @@
+
+
+
+
 :root {
   --clr-white: #ffffff;
   --clr-mist: #fbf1f2;
@@ -37,7 +41,6 @@
 }
 
 body {
-  min-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -198,6 +201,75 @@ header {
 .icons img:hover {
   height: 32px;
   animation: ease 3ms;
+}
+
+.error-message{
+  height: min-content;
+  background-color: var(--clr-white);
+  width: 80%;
+  max-width: 1000px;
+  border: 6px solid rgb(182, 2, 2);
+  color: var(--clr-black);
+  padding: 16px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error-message h2 {
+  font-family: var(--font-regular);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.error-message div {
+  display: flex;
+  flex-direction: row;
+  max-width: 600px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.error-message img {
+  max-width: 50%;
+}
+
+.error-message a {
+  color: rgb(182, 2, 2);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+}
+
+   
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin:100px auto 16px;
+  position: relative;
+  background: var(--clr-white);
+  box-shadow: -24px 0 var(--clr-white) , 24px 0 var(--clr-white);
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: var(--clr-white);
+    box-shadow: -24px 0 var(--clr-golden), 24px 0 var(--clr-white);
+  }
+  66% {
+    background: var(--clr-golden);
+    box-shadow: -24px 0  var(--clr-white), 24px 0 var(--clr-white);
+  }
+  100% {
+    background: var(--clr-white);
+    box-shadow: -24px 0 var(--clr-white), 24px 0 var(--clr-golden);
+  }
 }
 
 /*HOME AND SUCCESSFUL CHECKOUTt*/
@@ -675,3 +747,5 @@ h2 {
     background: url(../images/home-splash.jpg) no-repeat top fixed;
   }
 }
+
+

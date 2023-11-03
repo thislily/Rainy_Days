@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --clr-white: #ffffff;
   --clr-mist: #fbf1f2;
   --clr-cloud: #f2f8fc;
@@ -27,7 +27,7 @@
   --fs-h2: 1.5rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-}
+} */
 
 .background {
   background-color: var(--clr-pine-light);

@@ -96,6 +96,7 @@ a {
 
 .item-container img {
   width: 50%;
+  max-height: 532px;
   padding: 16px;
 }
 
@@ -120,6 +121,15 @@ p {
 
 input[type="radio"] {
   display: none;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.sale-price {
+  font-weight: var(--fw-medium);
+  color: #c0010c;
 }
 
 .size-picker {
