@@ -37,9 +37,6 @@ export async function createProductHTML(product) {
                                 </div>
                             <div class="colour-options">
                                 <div class="colour1" style="background-color: ${colour}"></div>
-                                <div class="colour2"></div>
-                                <div class="colour3"></div>
-                                <div class="colour4"></div>
                             </div>
                             </div>
                             </a>`;
