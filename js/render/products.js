@@ -15,7 +15,7 @@ export const addOnSignUpHtml = `<div class="dont-miss-out">
 
 export async function getProducts() {
   try {
-    const response = await fetch(urll);
+    const response = await fetch(url);
     const products = await response.json();
     return products;
   } catch (error) {

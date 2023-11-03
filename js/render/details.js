@@ -10,7 +10,7 @@ const itemURL = url + id;
 
 export async function getItem() {
   try {
-    const response = await fetch(itemURLl);
+    const response = await fetch(itemURL);
     const item = await response.json();
     return item;    
   } catch (error) {
