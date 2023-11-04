@@ -4,11 +4,11 @@ import { itemPage } from "./render/details.js";
 
 
 
-if (location.pathname === "/html/collection"){  
+if (location.pathname === "/html/collection" || "/html/collection.html"){  
     collectionPage();
 }
 
-if (location.pathname === "/html/sale"){
+if (location.pathname === "/html/sale" || "/html/sale.html"){
     salePage();
 }
 
