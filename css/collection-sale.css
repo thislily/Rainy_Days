@@ -33,14 +33,14 @@
 main {
   background: url(../images/our-story/our-story-bg.jpg) no-repeat bottom 
   fixed;
-background-size: cover;
-width: 100%;
-min-height: 670px;
-overflow: hidden;
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: space-between;
+  background-size: cover;
+  width: 100%;
+  min-height: 670px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title-box {
@@ -151,6 +151,12 @@ h1 {
   width: 20px;
   border-radius: 100px;
   border: 1px black solid;
+}
+
+.colour2, .colour3, .colour4{
+  background-image: url(../images/icons/sold-out.svg);
+  background-size: cover;
+  background-position: center;
 }
 
 .colour1 {
