@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/checkout.css" />
+    <script type="module" src="../js/app.js"></script>
     <title>Checkout | Rainy Days</title>
   </head>
 
@@ -79,12 +80,30 @@
             src="../images/icons/user.svg"
             alt="user icon. opens login page"
         /></a>
-        <a href="checkout.html"
-          ><img
-            src="../images/icons/cart-full.svg"
+        
+        <!-- <div class="cart-icon">
+          <img
+            
+            src="../images/icons/cart.svg"
             alt="cart icon. opens checkout page"
-        /></a>
-      </div>
+        />
+        <h3 class="cart-icon-display-total">0</h3>
+        </div> -->
+
+
+      </div> 
+      <!-- <div class="shopping-cart">
+        <h3>My Shopping Cart ( <span id="total-cart-items" ></span> )</h3>
+        <span class="cart-spacing-line"></span>
+        <ul class="cart-items">
+         
+          
+        </ul>
+        
+        <h3 class="cart-subtotal"><span id="cart-subtotal" ></span></h3>
+        <a class="cart-checkout" href="../checkout.html">Checkout</a>
+        </div>
+      </div> -->
     </header>
 
     <!--content begins-->
@@ -122,77 +141,21 @@
       <!--Box 1-->
 
       <div class="checkout-container">
-        <h2>1. Review Your Order (<span id="how-many-items">2 items</span>)</h2>
-        <span class="thin-line"></span>
-        <div class="product-checkout" id="fleece-zip-checkout">
-          <img
-            class="product-checkout-image"
-            src="../images/items/fleece-zip.png"
-            alt="A fleece zip up jacket"
-          />
-          <div class="product-checkout-info">
-            <h3>Fleece Zip</h3>
-            <div>
-              <p>Size: <span id="fleece-zip-size">Medium</span></p>
-              <p>Colour: <span id="fleece-zip-colour">Brown</span></p>
-            </div>
-            <div class="quantity-box">
-              <label for="fleece-zip-quantity">Qty: </label>
-              <input
-                type="number"
-                id="fleece-zip-quantity"
-                name="fleece-zip-quantity"
-                min="1"
-                max="10"
-                value="1"
-              />
-            </div>
-          </div>
-          <div class="product-checkout-cost">
-            <img
-              class="x-mark"
-              src="../images/checkout/close.svg"
-              alt="close icon, click to remove item from cart"
-            />
-            <h3><span id="fleece-zip-price">799,99 kr</span></h3>
-          </div>
-        </div>
-
-        <div class="product-checkout" id="gift-card-checkout">
-          <img
-            class="product-checkout-image"
-            src="../images/items/gift-card.svg"
-            alt="A gift card with the rainy days logo"
-          />
-          <div class="product-checkout-info">
-            <h3>Gift Card</h3>
-            <p>Amount: <span id="gift-card-amount">500 kr</span></p>
-            <div class="quantity-box">
-              <label for="gift-card-quantity">Qty: </label>
-              <input
-                type="number"
-                id="gift-card-quantity"
-                name="gift-card-quantity"
-                min="1"
-                max="10"
-                value="1"
-              />
-            </div>
-          </div>
-          <div class="product-checkout-cost">
-            <img
-              class="x-mark"
-              src="../images/checkout/close.svg"
-              alt="close icon, click to remove item from cart"
-            />
-            <h3><span id="gift-card-price">500,00 kr</span></h3>
-          </div>
-        </div>
+        <h2>1. Review Your Order ( <span id="total-cart-items"></span> )</h2><div class="cart-icon-display-total cart-icon"></div>
         <span class="thin-line"></span>
 
-        <h2 class="centered-text">
-          Subtotal <span id="items-subtotal">1299,00 kr</span>
-        </h2>
+      <div class="checkout-cart">
+        <ul class="cart-items">
+         
+          
+        </ul>
+
+        
+      </div>
+        <span class="thin-line"></span>
+
+        <h3 class="cart-subtotal"> Subtotal: <span id="cart-subtotal" ></span></h3>
+        
 
         <button id="delivery-anchor" class="next">
           <a href="#delivery-anchor">Next</a>
@@ -230,7 +193,7 @@
               value="regular-post"
             />
             <label for="regular-post"
-              ><p>89 kr</p>
+              ><p>$100.00</p>
               <div>
                 <p>Regular Post</p>
                 <p>(10-15 business days)</p>
@@ -250,7 +213,7 @@
               value="delivered-with-groceries"
             />
             <label for="delivered-with-groceries"
-              ><p>19 kr</p>
+              ><p>$9.99</p>
               <div>
                 <p>Delivered with Groceries</p>
                 <p>(2-3 days, even weekends)</p>
@@ -409,7 +372,7 @@
         <div class="subtotal-box">
           <div class="subtotal-box-bit">
             <h3>Subtotal</h3>
-            <p><span id="subtotal">1299,00</span> kr</p>
+            <p><span id="checkout-subtotal"></span> </p>
           </div>
           <div class="subtotal-box-bit">
             <div class="subtotal-box-shipping">
@@ -417,11 +380,11 @@
               <p id="delivery-choice">Delivered with Groceries</p>
               <p id="delivery-choice-info">(2-3 days, even weekends)</p>
             </div>
-            <p><span>19,00</span> kr</p>
+            <p><span id="shipping-price">$9.99</span> </p>
           </div>
           <div class="order-total subtotal-box-bit">
             <h2>Order Total</h2>
-            <h2><span id="total-price">1318,00</span> kr</h2>
+            <h2><span id="total-price">1318,00</span></h2>
           </div>
         </div>
 

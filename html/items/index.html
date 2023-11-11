@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="../../css/item-pages.css" />
     <link rel="stylesheet" href="../../css/extras.css">
     <script type="module" src="../../js/app.js"></script>
-
     <title>Fleece Zip | Rainy Days</title>
   </head>
   <body>
@@ -70,17 +69,37 @@
       </nav>
 
       <div class="icons">
-        <a href="../login.html"
+        <a href="login.html"
           ><img
             src="../../images/icons/user.svg"
             alt="user icon. opens login page"
         /></a>
-        <a href="../checkout.html"
-          ><img
+        
+        <div class="cart-icon">
+          <img
+            
             src="../../images/icons/cart.svg"
             alt="cart icon. opens checkout page"
-        /></a>
+        />
+        <h3 class="cart-icon-display-total">0</h3>
+        </div>
+        
+
+
+      </div> <div class="shopping-cart">
+        <h3>My Shopping Cart ( <span id="total-cart-items" >1</span> )</h3>
+        <span class="cart-spacing-line"></span>
+        <ul class="cart-items">
+         
+          
+        </ul>
+        
+        <h3 class="cart-subtotal">Subtotal: <span id="cart-subtotal" ></span></h3>
+        <a class="cart-checkout" href="../checkout.html">Checkout</a>
+        </div>
       </div>
+
+
     </header>
 
     <!--content begins-->
@@ -209,3 +228,4 @@
     </footer>
   </body>
 </html>
+

@@ -4,6 +4,8 @@ const saleBannerContainer = document.querySelector(".winter-sale-full");
 
 let saleBannerHTML = "";
 
+
+//create html for sale banner
 export async function displayRandomProduct(data) {
   let saleArr = [];
   for (let i = 0; i < data.length; i++) {
@@ -22,6 +24,7 @@ export async function displayRandomProduct(data) {
   saleBannerContainer.innerHTML += saleBannerHTML;
 }
 
+//function runs on page load
 export async function saleBanner() {
   const products = await getProducts();
   displayRandomProduct(products);

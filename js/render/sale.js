@@ -2,6 +2,7 @@ import { productsContainer, loader, getProducts, addOnSignUpHtml } from "./produ
 import { createProductHTML,productHTML } from "./create-product.js";
 
 
+//display only sale products
 export async function displaySaleProducts(data){
   for (let i = 0; i < data.length; i++) {
     if (!data[i].onSale) {
@@ -14,7 +15,7 @@ export async function displaySaleProducts(data){
   productsContainer.innerHTML += addOnSignUpHtml;
 };
 
-
+//function runs on page load
 export async function salePage(){
     const products = await getProducts();
     displaySaleProducts(products);

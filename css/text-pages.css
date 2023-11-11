@@ -106,6 +106,12 @@ p {
   flex: auto;
 }
 
+.cart-item p, .cart-item-cost p{
+  padding: 0px;
+  margin: 0px;
+  flex: none;
+}
+
 /*GET INVOLVED*/
 
 .get-involved-bg {

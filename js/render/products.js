@@ -13,6 +13,7 @@ export const addOnSignUpHtml = `<div class="dont-miss-out">
                          </div>`;
 
 
+//recieve all products from API                        
 export async function getProducts() {
   try {
     const response = await fetch(url);
@@ -26,6 +27,7 @@ export async function getProducts() {
   }
 };
 
+//display all products
 export async function displayProducts(data) {
   for (let i = 0; i < data.length; i++) {
     createProductHTML(data[i]);

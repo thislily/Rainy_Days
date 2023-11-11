@@ -119,7 +119,7 @@ label {
   padding-top: 8px;
 }
 
-input {
+.form input {
   width: 98%;
   height: 30px;
   border: 1px var(--clr-black) solid;

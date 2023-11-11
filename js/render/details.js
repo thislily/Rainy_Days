@@ -1,6 +1,8 @@
 import { loader } from "./products.js";
 import { url } from "./products.js";
 import { displayError } from "../messages/error.js";
+import { addToCart } from "../shopping-cart/add-items.js";
+import { getCartFromLocalStorage } from "../shopping-cart/local-storage.js";
 
 const itemContainer = document.querySelector(".item-container");
 const queryString = document.location.search;
@@ -8,6 +10,11 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const itemURL = url + id;
 
+
+//create array of selected products
+export let productsInCart = getCartFromLocalStorage() || [];
+
+//recieve item details from API
 export async function getItem() {
   try {
     const response = await fetch(itemURL);
@@ -20,10 +27,11 @@ export async function getItem() {
 
   };
 
+//display item details
 export async function displayItem(data){
 
     let itemHTML = "";
-    
+
       let price = "";
       if (data.price === data.discountedPrice) {
       price = `$${data.price}`;
@@ -47,7 +55,11 @@ export async function displayItem(data){
       let sizeLabels = "";
       for (let i = 0; i < data.sizes.length; i++){
           let size = data.sizes[i];  
-          sizeLabels += `<label class="size-bubble" for="${size}">
+          let selectedSize = "";
+          if (size === "M"){
+            selectedSize =  "selected-size-bubble";
+          }
+          sizeLabels += `<label class="size-bubble ${selectedSize}" for="${size}">
                             <input type="radio" name="colour-picker" id="${size}" value="${size}" />
                             <h3>${size.toUpperCase()}</h3>
                         </label>`
@@ -73,15 +85,15 @@ export async function displayItem(data){
       itemHTML = `<img
       src="${data.image}" alt="${data.title}"/>
       <div class="item-information">
-      <h1>${shortenedTitle}</h1>
+      <h1 class="product-name">${shortenedTitle}</h1>
       <h2><i>${genderedFit}</i></h2>
       <p>${data.description}</p>
-      <p>${price}</p>
+      <p class="product-price">${price}</p>
       <div class="size-picker">${sizeLabels}</div>
       <div class="colour-picker">${colourLabels}</div>
 
       <div class="checkout-buttons">
-        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart" data-product-id="1">Add to Cart</button>
         <a class="go-to-checkout" href="../checkout.html">Checkout</a>
         </div>
       </div> `;
@@ -89,8 +101,22 @@ export async function displayItem(data){
       loader.classList.remove("loader");
       itemContainer.innerHTML = itemHTML;
 
+      const cartButton = document.querySelector('.add-to-cart');
+      if (cartButton) {
+          // Update the button click event to add the item to the cart
+          cartButton.addEventListener('click', function() {
+              // Call a function to add the item to the cart
+              
+              cartButton.innerText = "Item in Cart";
+              setTimeout(() => {
+                cartButton.innerText = "Add to Cart";
+              }, "5000");
+              addToCart(data);
+          });
+        }
 };
 
+//function runs on page load
   export async function itemPage(){
       const item = await getItem();
       displayItem(item);  

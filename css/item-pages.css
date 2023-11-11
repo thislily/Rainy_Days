@@ -156,6 +156,11 @@ input[type="radio"] {
   margin: 0px;
 }
 
+.selected-size-bubble {
+  border: 5px var(--clr-river) solid;
+  margin: 0px;
+}
+
 .colour-picker {
   display: flex;
   flex-direction: row;
@@ -188,45 +193,13 @@ input[type="radio"] {
   background-color: #d7cbbb;
 } */
 
-.colour-option:hover {
+.colour-option{
   border: 5px var(--clr-river) solid;
   margin: 0px;
 }
 
-.checkout-buttons {
-  display: flex;
-  gap: 8px;
-}
 
-.add-to-cart {
-  width: 140px;
-  border: 5px solid var(--clr-golden);
-  padding: 4px;
-  background-color: var(--clr-white);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-semi-bold);
-}
 
-.add-to-cart:hover {
-  background-color: var(--clr-golden-light);
-}
-
-.go-to-checkout {
-  width: 122px;
-  border: 5px solid var(--clr-pine);
-  padding: 4px;
-  text-align: center;
-  background-color: var(--clr-white);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-semi-bold);
-  text-decoration: none;
-  color: var(--clr-black);
-}
-
-.go-to-checkout:hover {
-  background-color: var(--clr-pine-light);
-  color: var(--clr-white);
-}
 
 /*GIFT CARD*/
 
@@ -347,10 +320,6 @@ input[type="radio"] {
     gap: 16px;
   }
 
-  .checkout-buttons {
-    display: flex;
-    gap: 26px;
-  }
 
 
 
