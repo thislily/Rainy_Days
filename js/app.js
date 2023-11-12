@@ -36,6 +36,7 @@ if (location.pathname ==="/index" || location.pathname === "/html/successful-che
 }
 
 if (location.pathname ==="/html/login"){
+    saleBanner();
     loginWidget();
 };
 
