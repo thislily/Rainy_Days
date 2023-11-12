@@ -31,7 +31,12 @@ if (location.pathname === "/html/successful-checkout"){
     checkoutCart();
 }
 
-if (location.pathname ==="/index/" || location.pathname === "/html/successful-checkout"){
+if (location.pathname ==="/index"){
+    saleBanner();
+}
+
+
+if (location.pathname === "/html/successful-checkout"){
     saleBanner();
 }
 
