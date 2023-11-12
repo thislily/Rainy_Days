@@ -10,11 +10,11 @@ import { checkForUsername } from "./login/login.js";
 
 
 //run functions based on location
-if (location.pathname === "/html/collection.html"){  
+if (location.pathname === "/html/collection"){  
     collectionPage();
 }
 
-if (location.pathname === "/html/sale.html"){
+if (location.pathname === "/html/sale"){
     salePage();
 }
 
@@ -22,20 +22,20 @@ if (location.pathname === "/html/items/"){
     itemPage();
 }
 
-if (location.pathname === "/html/checkout.html") {
+if (location.pathname === "/html/checkout") {
     document.addEventListener("scroll", updateCheckoutPrice);
     updateCheckoutPrice();
 }
 
-if (location.pathname === "/html/successful-checkout.html"){
+if (location.pathname === "/html/successful-checkout"){
     checkoutCart();
 }
 
-if (location.pathname ==="/index.html" || location.pathname === "/html/successful-checkout.html"){
+if (location.pathname ==="/index" || location.pathname === "/html/successful-checkout"){
     saleBanner();
 }
 
-if (location.pathname ==="/html/login.html"){
+if (location.pathname ==="/html/login"){
     loginWidget();
 };
 
