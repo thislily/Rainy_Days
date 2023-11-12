@@ -5,7 +5,7 @@ const saleBannerContainer = document.querySelector(".winter-sale-full");
 let saleBannerHTML = "";
 
 
-//create html for sale banner
+//create html for sale banner from randomly chosen item data
 export async function displayRandomProduct(data) {
   let saleArr = [];
   for (let i = 0; i < data.length; i++) {
@@ -16,7 +16,6 @@ export async function displayRandomProduct(data) {
   }
 
   let randomNumber = Math.floor(Math.random() * saleArr.length);
-
   let saleImageHTML = `src="${saleArr[randomNumber].image}" alt="${saleArr[randomNumber].title}"`;
 
   saleBannerHTML = `<img ${saleImageHTML}/>`;

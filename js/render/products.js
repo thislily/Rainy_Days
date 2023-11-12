@@ -6,6 +6,7 @@ export const url = "https://api.noroff.dev/api/v1/rainy-days/";
 export const productsContainer = document.querySelector(".products");
 export const loader = document.querySelector(".loader");
 
+//HTML for the end of product lists
 export const addOnSignUpHtml = `<div class="dont-miss-out">
                          <h2>Don't Miss Out!</h2>
                          <p>Sign up to get early access to upcoming sales</p>

@@ -32,6 +32,7 @@ export async function displayItem(data){
 
     let itemHTML = "";
 
+    //check if item is on sale and change price accordingly
       let price = "";
       if (data.price === data.discountedPrice) {
       price = `$${data.price}`;
@@ -40,9 +41,12 @@ export async function displayItem(data){
                 <span class="sale-price">$${data.discountedPrice}<span>`;
       };
     
+      //remove brand name from title
       let removeBrandName = "Rainy Days ";
       let shortenedTitle = data.title.replace(removeBrandName, "");
     
+
+       // display the gender based fit of the item
       let genderedFit = "";
       if (data.gender === "Male") {
         genderedFit = "Masculine Fit";
@@ -52,6 +56,7 @@ export async function displayItem(data){
           genderedFit = "Unisex";
       };
 
+      //create labels for sizes based on size array
       let sizeLabels = "";
       for (let i = 0; i < data.sizes.length; i++){
           let size = data.sizes[i];  
@@ -65,6 +70,7 @@ export async function displayItem(data){
                         </label>`
         }
 
+      // create colour labels. I made it function like the size label maker, despite only having one colour.
       let colourLabels = "";
       if (Array.isArray(data.baseColor)){
           for (let i = 0; i < data.baseColor.length; i++){
@@ -82,6 +88,7 @@ export async function displayItem(data){
           </label>`;
       };
     
+      //// template html for each item
       itemHTML = `<img
       src="${data.image}" alt="${data.title}"/>
       <div class="item-information">
@@ -101,12 +108,10 @@ export async function displayItem(data){
       loader.classList.remove("loader");
       itemContainer.innerHTML = itemHTML;
 
+      //add item to cart on click
       const cartButton = document.querySelector('.add-to-cart');
       if (cartButton) {
-          // Update the button click event to add the item to the cart
           cartButton.addEventListener('click', function() {
-              // Call a function to add the item to the cart
-              
               cartButton.innerText = "Item in Cart";
               setTimeout(() => {
                 cartButton.innerText = "Add to Cart";

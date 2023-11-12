@@ -1,35 +1,37 @@
 import { productsInCart } from "../render/details.js";
 import { saveCartToLocalStorage } from "./local-storage.js";
 import { removeFromCart } from "./remove-items.js";
-import { updateTotalQuantity,updateTotalPrice } from "./show-cart.js";
+import { updateTotalQuantity, updateTotalPrice } from "./show-cart.js";
 
+//update shopping cart UI
 export function updateCartUI() {
-    let cartItems = document.querySelector('.cart-items');
+  let cartItems = document.querySelector(".cart-items");
 
-    let filteredCart = productsInCart.filter(function(product) {
-        return product.quantity > 0;
-    });
+  let filteredCart = productsInCart.filter(function (product) {
+    return product.quantity > 0;
+  });
 
-    saveCartToLocalStorage(filteredCart);
+  saveCartToLocalStorage(filteredCart);
 
-   cartItems.innerHTML = "";
-    
-   if (filteredCart.length === 0) {
-    
-    let emptyCartMessage = document.createElement('p');
+  cartItems.innerHTML = "";
+
+  //display message if cart is empty
+  if (filteredCart.length === 0) {
+    let emptyCartMessage = document.createElement("p");
     emptyCartMessage.classList.add("empty-cart-message");
     let spacer = `</div><span class="cart-spacing-line"></span>`;
-    emptyCartMessage.textContent = "Oops, there isn't anything in your cart yet!";
+    emptyCartMessage.textContent =
+      "Oops, there isn't anything in your cart yet!";
+
     cartItems.appendChild(emptyCartMessage);
     cartItems.innerHTML += spacer;
-    
-} else {
-    
-    filteredCart.forEach(function(product) {
-        let listItem = document.createElement('li');
-        listItem.innerHTML = 
 
-        `<div class="cart-item">
+  } else {
+
+    //add the following html to the shopping cart ul for every product in the cart array
+    filteredCart.forEach(function (product) {
+      let listItem = document.createElement("li");
+      listItem.innerHTML = `<div class="cart-item">
                   <img
                     class="cart-item-image"
                     src="${product.image}"
@@ -65,16 +67,18 @@ export function updateCartUI() {
                    
                   </div><span class="cart-spacing-line"></span>
                
-                  ` ;
-        cartItems.appendChild(listItem);
+                  `;
+      cartItems.appendChild(listItem);
 
-        listItem.querySelector('.remove').addEventListener('click', function() {
-           
-            removeFromCart(product.id);
-        });
+      //remove items on click of remove button
+      listItem.querySelector(".remove").addEventListener("click", function () {
+        removeFromCart(product.id);
+      });
     });
-}
-    saveCartToLocalStorage();
-    updateTotalQuantity();
-    updateTotalPrice();
   }
+
+  //update all UI and storage 
+  saveCartToLocalStorage();
+  updateTotalQuantity();
+  updateTotalPrice();
+}

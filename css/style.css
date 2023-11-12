@@ -9,6 +9,7 @@
   --clr-dark: #060c0d;
   --clr-black: #000000;
   --clr-golden: #d78c02;
+  --clr-crimson:rgb(182, 2, 2);
   --clr-golden-light: hsl(39, 98%, 43%, 30%);
   --clr-button-background: hsl(0, 0%, 0%, 30%);
 
@@ -201,7 +202,7 @@ header {
   background-color: var(--clr-white);
   width: 80%;
   max-width: 1000px;
-  border: 6px solid rgb(182, 2, 2);
+  border: 6px solid var(--clr-crimson);
   color: var(--clr-black);
   padding: 16px;
   margin: 40px auto;
@@ -404,6 +405,14 @@ li .cart-spacing-line{
   width: 100%;
 }
 
+#user-name-display{
+  text-align: right;
+  padding-right: 8px;
+  padding-bottom: 6px;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+  color: var(--clr-mist);
+}
 
 
 
@@ -656,6 +665,15 @@ h2 {
 /* MEDIA QUERIES */
 
 /* medium+ */
+
+@media screen and (max-width: 1200px){
+  #user-name-display{
+    position: absolute;
+    top: 6px;
+    right: 40px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .shop-jackets{
     font-size: var(--fs-splash-mini);
@@ -670,6 +688,13 @@ h2 {
 /* medium */
 
 @media screen and (max-width: 900px) {
+
+  #user-name-display{
+    position: static;
+    top: 6px;
+    right: 40px;
+  }
+
   .navbar {
     opacity: 0.95;
   }
@@ -954,4 +979,18 @@ h2 {
   }
 }
 
+@media screen and (max-width: 500px){
+  #user-name-display{
+    width: 150px;
+    padding-bottom: 6px;
+    padding-right: 6px;
+   
+    font-size: 14px;
+  }
+}
 
+@media screen and (max-width: 372px){
+  #user-name-display{
+    display: none;
+  }
+}

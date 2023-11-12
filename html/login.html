@@ -67,6 +67,7 @@
       </nav>
 
       <div class="icons">
+        <p id="user-name-display"></p>
         <a href="login.html"
           ><img
             src="../images/icons/user.svg"
@@ -105,26 +106,29 @@
           <div class="toggle-box">
             <button class="log-in">
               <h2>Already have an account?</h2>
-              <img src="../images/icons/user-dark.svg" alt="user icon" />
+              <img id="user-icon" src="../images/icons/user-dark.svg" alt="user icon" />
             </button>
             <button class="make-account">
               <h2>Not yet a member?</h2>
-              <img src="../images/icons/circle-plus.svg" alt="" />
+              <img id="plus-icon" src="../images/icons/circle-plus.svg" alt="" />
             </button>
           </div>
           <div class="enter-info">
             <h1 id="login-title">Log in here</h1>
             <div class="form">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username" placeholder="max 12 characters"/>
               <label for="email">Email address</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" placeholder="ex. name@email.com"/>
               <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
-              <label for="retype">Retype password</label>
-              <input type="password" name="retype" id="retype" />
+              <input type="password" name="password" id="password" placeholder="min 8 chars. & min 1 number"/>
+              <label id="retype-label" for="retype">Retype password</label>
+              <input type="password" name="retype" id="retype" placeholder="must match password"/>
               <button id="forgot-password">Forgot your password?</button>
               <button id="reset-password">Reset password via email</button>
+              <p id="email-sent"></p>
               <button class="log-in-now">
-                <a href="../index.html">Enter</a>
+                <b>Enter</b>
               </button>
             </div>
           </div>
