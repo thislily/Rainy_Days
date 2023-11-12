@@ -5,6 +5,7 @@ export let productHTML = "";
 export async function createProductHTML(product) {
   let price = "";
 
+  //check if item is onsale and change price accordingly
   if (product.price === product.discountedPrice) {
     price = `$${product.price}`;
   } else {
@@ -12,11 +13,15 @@ export async function createProductHTML(product) {
                 <span class="sale-price">$${product.discountedPrice}</span>`;
   }
 
+  
   const colour = product.baseColor;
 
+
+  //remove brand name from title
   let removeBrandName = "Rainy Days ";
   let shortenedTitle = product.title.replace(removeBrandName, "");
 
+ c
   let genderedFit = "";
   if (product.gender === "Male") {
     genderedFit = "Masculine Fit";
@@ -26,6 +31,7 @@ export async function createProductHTML(product) {
     genderedFit = "Unisex Fit";
   }
 
+  // template html for each product
   productHTML = ` <a class="product" href="./items/?id=${product.id}">
                     <img src="${product.image}" alt="${product.title}" />
                         <div class="product-info">
