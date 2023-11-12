@@ -21,7 +21,7 @@ export async function createProductHTML(product) {
   let removeBrandName = "Rainy Days ";
   let shortenedTitle = product.title.replace(removeBrandName, "");
 
- c
+ 
   let genderedFit = "";
   if (product.gender === "Male") {
     genderedFit = "Masculine Fit";
